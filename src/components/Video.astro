@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import check from "../icons/check.svg";
+import rotate from "../icons/rotate.svg";
+---
+
+<section class="h-screen w-full flex flex-col items-center justify-center">
+	<div
+		class="my-32 py-5 shadow-sm w-full rounded-lg flex justify-evenly items-start text-1xl">
+		<p class="gap-1 font-normal text-xl flex items-center justify-center">
+			<span
+				><Image src={check} alt="logo-check" class="logo-check" /></span
+			>Expert Trainers
+		</p>
+		<p class="gap-1 font-normal text-xl flex items-center justify-center">
+			<span
+				><Image src={check} alt="logo-check" class="logo-check" /></span
+			>Lifetime Acces
+		</p>
+		<p class="gap-1 font-normal text-xl flex items-center justify-center">
+			<span
+				><Image src={check} alt="logo-check" class="logo-check" /></span
+			>Online Remote Learning
+		</p>
+	</div>
+	<article class="w-full flex flex-col items-center justify-center">
+		<div class="relative my-20">
+			<Image
+				src={rotate}
+				alt="video decoration"
+				class="absolute -top-16 -right-16 w-36"
+			/>
+
+			<iframe
+				class="aspect-video shadow-lg h-96 video"
+				src="https://www.youtube.com/embed/KQ4Qwh-nuow?si=UhDX8PXuURukgOM8"
+				title="YouTube video player"
+				allow="accelerometer; autoplay; clipboard-write ;  encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen></iframe>
+		</div>
+		<aside>
+			<div>
+				<h6>29.3k</h6>
+				<span>STUDENT ENROLLED</span>
+			</div>
+			<div>
+				<h6>32.4K</h6>
+				<span>CLASS COMPLETED</span>
+			</div>
+			<div>
+				<h6>100%</h6>
+				<span>SATISFACTION RATE</span>
+			</div>
+			<div>
+				<h6>354+</h6>
+				<span>TOP INSTRUCTORS</span>
+			</div>
+		</aside>
+	</article>
+</section>
+
+<style>
+	section {
+		z-index: -1;
+		background-image: linear-gradient(to top, transparent, #fafafa),
+			url("../img/hero-bg.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.video {
+		outline: 0.5rem solid #ff7b22;
+		border-radius: 1rem;
+	}
+
+	aside {
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+	aside div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		border-radius: 1rem;
+		padding: 3rem;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	aside div:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		cursor: crosshair;
+	}
+	aside div h6 {
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+	aside div span {
+		font-size: 1rem;
+	}
+</style>

@@ -1,28 +1,27 @@
-<p id="demo">
-	<span>
-		Mastering English transcends mere skill; it's a gateway to limitless
-		possibilities and profound connections. In our interconnected global
-		landscape, it stands as the shared language that unifies diverse
-		cultures and fosters communication. Beyond its linguistic role, English
-		becomes a key unlocking doors to fresh ideas, opportunities, and
-		friendships.</span
-	>
-</p>
+<section class="relative">
+	<p id="demo" class="absolute">
+		<span class=""
+			>Dive into the English learning adventure with me, Professor Steve.
+			Together, let's unlock new skills and global opportunities. Embrace
+			the joy of learning!</span
+		>
+	</p>
+</section>
 
 <style>
 	#demo {
-		position: fixed;
-		font-size: 1.25em;
-		width: 80vw;
-		height: 100%;
-		margin: auto;		
-		top: 75%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		position: absolute;
+		font-size: 1.75em;
+		line-height: 6rem;
+		width: 80%;
+		transform: translate(10%, 50%);
+		font-weight: bold;
+		/* height: 100vh; */
+
 		text-align: center;
-		font-weight: 800;
-		--chars:  398;
-		max-width: 50ch;
+
+		/* --chars: 144; */
+		--chars: 155;
 	}
 
 	span {
@@ -31,13 +30,8 @@
 			linear-gradient(to right, #6300ff 0%, #e915c7 100%) 0 / 0 no-repeat;
 		-webkit-background-clip: text;
 		color: transparent;
-
 		animation: text steps(var(--chars)) forwards;
 		animation-timeline: scroll(root);
-	}
-
-	body {
-		height: 400dvh;
 	}
 
 	@keyframes text {
@@ -49,12 +43,16 @@
 		}
 	}
 
-	* {
-		margin: 0;
-		padding: 0;
-	}
+	/* * {
+  margin: 0;
+  padding: 0;
+} */
 
-	html {
+	section {
 		font-size: clamp(16px, 2vmax + 1em, 42px);
+		width: 100%;
+		height: 100vh;
+		margin-top: 5rem;
+		overflow-y: scroll;
 	}
 </style>

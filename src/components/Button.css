@@ -26,19 +26,16 @@ dialog {
 
 /* Etc */
 
-body,
-button {
-	font-family: Anybody, system-ui;
-	font-size: 1.25rem;
-}
+
 
 button {
 	padding: 1rem;
 	background: linear-gradient(-45deg in oklch, #f07030, blue);
 	color: white;
-	outline: 0.25rem solid #ff7b22;
+	outline: 0.25rem solid transparent;
 	border-radius: 1rem;
-	transition: all 0.2s ease-out;
+	font-weight: bold;
+	font-size: 1.25rem;
 }
 button:hover {
 	background: linear-gradient(-90deg in oklch, #f07030, blue);

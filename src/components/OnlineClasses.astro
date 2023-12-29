@@ -1,47 +1,55 @@
 ---
+import { Image } from "astro:assets";
 import CardClasses from "./CardClasses.astro";
+import book from "../icons/book.svg";
+import book2 from "../icons/book2.svg";
+import star from "../icons/star.svg";
+import stars from "../icons/stars.svg";
 ---
 
-<section class="w-full h-screen flex flex-col ">
+<section class="w-full h-full max-h-screen flex flex-col" id="classes">
 	<aside class="my-40">
-		<p>CATEGORIES</p>
+		<p class="font-semibold">CATEGORIES</p>
 		<h2>Online Classes <br /> <strong>For Remote Learning</strong></h2>
 	</aside>
-   <aside class="w-[90%] flex flex-wrap justify-evenly ">
-      <CardClasses
-		img=""
-		title="Class Title"
-		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-		link="/"
-		link="https://www.google.com"
-		textLink="Learn More"
-	/>
-         <CardClasses
-		img=""
-		title="Class Title"
-		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-		link="/"
-		link="https://www.google.com"
-		textLink="Learn More"
-	/>
-         <CardClasses
-		img=""
-		title="Class Title"
-		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-		link="/"
-		link="https://www.google.com"
-		textLink="Learn More"
-	/>
-         <CardClasses
-		img=""
-		title="Class Title"
-		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-		link="/"
-		link="https://www.google.com"
-		textLink="Learn More"
-	/>
-   </aside>
-	
+	<aside class="w-[90%] h-screen flex flex-wrap justify-evenly gap-3">
+		<div class="relative">
+			<Image src={book} alt="book" class="absolute top-1 right-1 w-8" />
+			<CardClasses
+				title="Beginner"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				link="https://www.google.com"
+				textLink="1 Class per week"
+			/>
+		</div>
+		<div class="relative">
+			<Image src={book2} alt="book" class="absolute top-1 right-1 w-8" />
+			<CardClasses
+				title="Intermediate"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				link="https://www.google.com"
+				textLink="2 Class per week"
+			/>
+		</div>
+		<div class="relative">
+			<Image src={star} alt="book" class="absolute top-1 right-1 w-8" />
+			<CardClasses
+				title="Professional"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				link="https://www.google.com"
+				textLink="3 Class per week"
+			/>
+		</div>
+		<div class="relative">
+			<Image src={stars} alt="book" class="absolute top-1 right-1 w-8" />
+			<CardClasses
+				title="Expert"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				link="https://www.google.com"
+				textLink="4 Class per week"
+			/>
+		</div>
+	</aside>
 </section>
 
 <style>
@@ -56,6 +64,7 @@ import CardClasses from "./CardClasses.astro";
 	h2 {
 		font-size: 2.5rem;
 		font-weight: 700;
+		line-height: 1.75;
 	}
 
 	strong {
