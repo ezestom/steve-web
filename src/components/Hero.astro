@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import student1 from "../img/student1.jpg";
+import student2 from "../img/student2.jpg";
+---
+
+<section
+	class="w-full h-[90vh] flex justify-center items-center mt-20 relative"
+	id="home">
+	<aside class="max-w-[80vw] flex justify-">
+		<article class="w-1/2 h-full">
+			<div class="px-10">
+				<h1
+					class="text-7xl sm:text-1xl tracking-wide text-center leading-none">
+					The Best <strong class="important-text"
+						>Program to Enroll
+					</strong>
+					 for Exchange Students
+				</h1>
+				<p class="text-2xl pt-10 text-center tracking-wide leading-8 opacity-70 max-w-[50ch]">
+					Excepteur sint occaecat cupidatat non proident sunt in culpa
+					qui officia deserunt mollit.
+				</p>
+			</div>
+		</article>
+		<article class="w-1/2 h-full gap-5">
+			<div class="grid-list h-full w-full">
+				<Image class="image-student" src={student1} alt="hero image" />
+				<Image class="image-student" src={student2} alt="hero image" />
+			</div>
+		</article>
+	</aside>
+	<div
+		class="fixed h-full w-full bg-transparent top-0 left-0 -z-10 background">
+		<div
+			class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
+		</div>
+	</div>
+</section>
+
+<style>
+	.grid-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+		background-image: url("../img/hero-shape-2.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+	.image-student {
+		object-fit: cover;
+		border-radius: 1rem;
+		outline: 0.5rem solid #ff7b22;
+	}
+	.important-text {
+		background: linear-gradient(-45deg in oklch, #f07030, blue);
+		border-radius: 1rem;
+		padding: 0.5rem;
+		color: white;
+	}
+	.background {
+		background-color: #fafafa;
+	}
+
+
+</style>

@@ -1,0 +1,28 @@
+---
+interface Props {
+	img?: string;
+	title?: string;
+	description?: string;
+	link?: string;
+	alt?: string;
+	textLink?: string;
+}
+const { img, title, description, link, textLink } = Astro.props;
+---
+
+<article
+	class="max-w-[300px] h-[500px] flex items-center justify-around flex-col">
+	<img src={img} alt={img} />
+	<h3 class="text-2xl">{title}</h3>
+	<p class="text-sm opacity-70 leading-loose">{description}</p>
+	<a href={link}>{textLink}</a>
+</article>
+
+<style>
+	article {
+		background-color: #fafafa;
+		border-radius: 1rem;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		padding: 1rem;
+	}
+</style>
