@@ -6,16 +6,16 @@ import professor from "../img/professor.jpg";
 <section
 	class="w-full h-full flex flex-col justify-center items-center my-20 relative max-w-[80%] m-auto"
 	id="experience">
-	<aside class="my-20 text-center flex flex-col items-center justify-center">
+	<aside class="mb-20 text-center flex flex-col items-center justify-center">
 		<p class="font-semibold">EXPERIENCE</p>
 		<h2>
 			Specialized in <br />
 			<strong> English Education</strong>
 		</h2>
 	</aside>
-	<article class="flex">
-		<aside class="w-1/2 h-full">
-			<div class="professor-container h-full">
+	<article class="flex items-center justify-around w-full">
+		<aside class="">
+			<div class="professor-container">
 				<Image
 					src={professor}
 					alt="English professor"
@@ -24,20 +24,19 @@ import professor from "../img/professor.jpg";
 			</div>
 		</aside>
 		<aside
-			class="w-1/2 flex flex-col items-center justify-center explain-container h-full">
+			class="flex flex-col items-center justify-center explain-container h-full">
 			<div class="px-10">
 				<p
-					class="text-6xl font-bold sm:text-1xl tracking-wide text-center leading-tight">
+					class="lg:text-5xl font-bold text-2xl text-center flex flex-col">
 					Over 30 Years in
 				</p>
-				<h1
-					class="text-6xl font-bold sm:text-1xl tracking-wide text-center leading-none">
+				<h1 class="text-5xl font-bold sm:text-1xl text-center">
 					<span class="important-text">Distant learning</span>
-					for Skill Development
+					<p>for Skill Development</p>
 				</h1>
 			</div>
 			<p
-				class="text-2xl font-semibold w-full text-pretty max-w-[50ch] text-center py-10">
+				class="text-xl h-auto text-pretty w-full text-center opacity-50 font-semibold max-w-[50ch] pt-5">
 				I became a teacher through a focused education in English,
 				certification, and continuous professional development,
 				emphasizing effective teaching and adapting to diverse student
@@ -50,7 +49,7 @@ import professor from "../img/professor.jpg";
 <style>
 	.professor-container {
 		width: auto;
-		height: 100%;
+		/* height: 100%; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -59,7 +58,7 @@ import professor from "../img/professor.jpg";
 		object-fit: cover;
 		border-radius: 1rem;
 		outline: 0.5rem solid #ff7b22;
-		max-width: 500px;
+		/* max-width: 500px; */
 	}
 	strong {
 		background: linear-gradient(-45deg in oklch, #f07030, blue);
@@ -75,5 +74,37 @@ import professor from "../img/professor.jpg";
 
 	.important-text {
 		color: #f07030;
+		font-size: 4rem;
+	}
+	.image-professor {
+		animation: zoom2 linear both;
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+		will-change: filter;
+		transition: filter 300ms;
+	}
+
+	@keyframes zoom2 {
+		from {
+			transform: scale(0.6);
+			opacity: 0.2;
+			translate: -50% 0%;
+		}
+	}
+	@media (width < 1250px) {
+		section {
+			padding-top: 5rem;
+			max-width: 96%;
+			margin: auto;
+		}
+		h2 {
+			font-size: 1.75rem;
+		}
+		.professor-container {
+			display: none;
+		}
+		.important-text {
+			font-size: 3rem;
+		}
 	}
 </style>

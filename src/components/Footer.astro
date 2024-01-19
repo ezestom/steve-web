@@ -1,0 +1,95 @@
+---
+import { Form } from "./Form/Form";
+
+import twitter from "../icons/twitter.svg";
+import linkedin from "../icons/linkedin.svg";
+import youtube from "../icons/youtube.svg";
+import world from "../icons/world.svg";
+---
+
+<section class="max-w-[80%] min-h-56 m-auto flex-col flex" id="contact">
+	<Form client:visible />
+	<div
+		class="w-full my-5 flex gap-1 lg:justify-between justify-center -z-1 items-center flex-wrap footer">
+		<a
+			target="_blank"
+			href="https://ezestom.github.io/portfolio/"
+			class="opacity-60 hover:opacity-100 transition">
+			<div class="flex flex-col items-center tracking-tighter">
+				<span>Created & Designed by</span>
+
+				<span class="flex items-center gap-1"
+					>Eze Stom <img
+						class="opacity-70"
+						src={world.src}
+						alt="world-icon"
+					/></span
+				>
+			</div>
+		</a>
+		<p
+			class="flex items-center flex-col gap-1 opacity-60 text-center tracking-tighter">
+			<span class="flex items-center gap-1 flex-col">
+				<span>www.steve.com</span>
+				<span>All rights reserved.</span>
+			</span>
+			<div class="flex gap-3">
+				<a
+					target="_blank"
+					href="https://www.linkedin.com/in/ezequielstom/">
+					<img
+						class="opacity-60 hover:opacity-100 transition"
+						src={twitter.src}
+						alt="twitter icon"
+					/>
+				</a>
+				<a
+					target="_blank"
+					href="https://www.linkedin.com/in/ezequielstom/">
+					<img
+						class="opacity-60 hover:opacity-100 transition"
+						src={linkedin.src}
+						alt="twitter icon"
+					/>
+				</a>
+				<a
+					target="_blank"
+					href="https://www.youtube.com/@ezequielstom6745">
+					<img
+						class="opacity-60 hover:opacity-100 transition"
+						src={youtube.src}
+						alt="twitter icon"
+					/>
+				</a>
+			</div>
+		</p>
+	</div>
+
+	<style>
+		strong {
+			background: linear-gradient(-45deg in oklch, #f07030, blue);
+			border-radius: 1rem;
+			padding: 0.5rem;
+			color: white;
+		}
+		@media (width < 1200px) {
+			section {
+				width: 96%;
+				margin-bottom: 3rem;
+			}
+			.footer {
+				margin: 0.5rem 0;
+				gap: 1rem;
+			}
+		}
+
+		.footer {
+			background: #fafafa;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border-bottom: 1px solid var(--border-line);
+			padding: 1rem;
+			border-radius: 1rem;
+			border-bottom: 1px solid var(--border-line);
+		}
+	</style>
+</section>

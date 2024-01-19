@@ -1,25 +1,30 @@
-<section class="h-full flex justify-center items-center my-20">
+<section class="h-full flex justify-center items-center mb-20" id="writing">
 	<article class="relative m-auto">
 		<p id="demo" class="absolute">
 			<span
-				>Dive into the English learning adventure with me, Professor
-				Steve. Together, let's unlock new skills and global
-				opportunities. Embrace the joy of learning!</span
+				>Dive into the English learning adventure with me. Together,
+				let's unlock new skills and global opportunities. Embrace the
+				joy of learning!</span
 			>
 		</p>
 	</article>
 </section>
 
 <style>
+	@media (width < 1250px) {
+		#writing {
+			display: none;
+		}
+	}
 	#demo {
-		/* width: 80%; */
+		width: 80%;
 		/* transform: translate(10%, 45%); */
 		font-weight: bold;
 		text-align: center;
 		max-height: 35vh;
 
 		/* --chars: 144; */
-		--chars: 280;
+		--chars: 300;
 	}
 	article {
 		/* outline: 0.5rem dashed #f07030; */
@@ -33,7 +38,8 @@
 	}
 
 	span {
-		font-size: 3rem;
+		font-size: 4rem;
+		line-height: 4rem;
 		background: 
       /* base color */ #eee /* highlight gradient */
 			linear-gradient(to right, #6300ff 0%, #e915c7 100%) 0 / 0 no-repeat;

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import youtube from "../../img/youtube.png";
-import close from "../../icons/x.svg";
 import "./BlurVideo.css";
 
-export function BlurVideo({ urlYoutube, video }) {
+export function BlurVideo({ urlYoutube, img }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const openDialog = () => {
@@ -17,14 +16,12 @@ export function BlurVideo({ urlYoutube, video }) {
 			headerElement.style.display = "none";
 		}
 	};
-
 	const closeDialog = () => {
 		setIsOpen(false);
 		// Restaurar el desplazamiento
 		document.body.style.overflow = "auto";
 
-		// Obtener el elemento con la clase .header y restaurar su desplazamiento
-		const headerElement = document.querySelector(".header");
+		const headerElement = document.getElementById("header");
 		if (headerElement) {
 			headerElement.style.display = "flex";
 		}
@@ -32,12 +29,10 @@ export function BlurVideo({ urlYoutube, video }) {
 
 	return (
 		<article className="relative">
-			<video
+			<img
+				src={img.src}
 				className=" rounded-[1rem] app-video  object-cover aspect-video m-auto  "
-				src={video}
-				loop
-				muted
-				autoPlay></video>
+			/>
 			<a onClick={openDialog}>
 				<img
 					src={youtube.src}

@@ -1,56 +1,85 @@
 ---
 import { Image } from "astro:assets";
-import check from "../icons/check.svg";
 import rotate from "../icons/rotate.svg";
 import { BlurVideo } from "./BlurVideo/BlurVideo";
-import preview from "../videos/pantalla.mp4";
+import preview from "../img/steve-english.jpg";
+import { Counter } from "../components/Counter/Counter";
 ---
 
 <section
-	class="w-full h-full flex flex-col justify-center items-center  relative my-32"
+	class="w-full h-full flex flex-col justify-center items-center relative"
 	id="video">
-	<article class="w-full flex flex-col items-center justify-center">
-		<div class="relative my-32 flex items-center justify-center">
+	<aside class="my-20 text-center flex flex-col items-center justify-center">
+		<p class="font-semibold">VIDEO</p>
+		<h2>
+			My Classes <br />
+			<strong> Live Education</strong>
+		</h2>
+	</aside>
+	<article
+		class="max-w-[80%] w-full flex flex-col items-center justify-between">
+		<div
+			class="relative mb-32 flex items-center justify-center video-container">
 			<Image
 				src={rotate}
 				alt="video decoration"
-				class="absolute -top-16 right-60 w-36 rotate-90"
+				class="absolute -top-20 right-24 w-40 rotate-90"
 			/>
 			<figure class="video">
 				<BlurVideo
 					client:visible
-					video={preview}
-					urlYoutube="https://www.youtube.com/embed/KQ4Qwh-nuow?si=UhDX8PXuURukgOM8"
+					img={preview}
+					urlYoutube="https://www.youtube.com/embed/4tN6h4OSrGU?si=dpoIiVNUeFwd8Vpk&autoplay=1&muted=0"
 				/>
 			</figure>
 		</div>
 		<aside>
-			<div>
-				<h6>+100</h6>
-				<span>STUDENT ENROLLED</span>
+			<div class="flex items-center justify-center">
+				<Counter
+					client:visible
+					initialValue={2345}
+					speed={20000}
+					children="+"
+					text="Happy Students"
+				/>
+				<hr />
 			</div>
-			<div>
-				<h6>+2000</h6>
-				<span>CLASS COMPLETED</span>
+
+			<div class="flex items-center justify-center">
+				<Counter
+					client:visible
+					initialValue={1999}
+					speed={20000}
+					children="+"
+					text="Classes Completed"
+				/>
+				<hr />
 			</div>
-			<div>
-				<h6>100%</h6>
-				<span>SATISFACTION RATE</span>
+			<div class="flex items-center justify-center">
+				<Counter
+					client:visible
+					initialValue={9000}
+					speed={20000}
+					children="+"
+					text="Exercise Learned"
+				/>
+				<hr />
 			</div>
-			<div>
-				<h6>+9000</h6>
-				<span>EXERCISES</span>
+			<div class="flex items-center justify-center">
+				<Counter
+					client:visible
+					initialValue={100}
+					speed={20000}
+					children="%"
+					text="Satisfaction Rate"
+				/>
+				<hr />
 			</div>
 		</aside>
 	</article>
 </section>
 
 <style>
-	section {
-		position: relative;
-		z-index: 1; /* Ajusta según sea necesario */
-	}
-
 	section::before {
 		content: "";
 		position: absolute;
@@ -69,35 +98,63 @@ import preview from "../videos/pantalla.mp4";
 	.video {
 		outline: 0.5rem solid #ff7b22;
 		border-radius: 1rem;
-		width: 65%;
+		width: 100%;
+		max-width: 65%;
 	}
 
 	aside {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		width: 100%;
-		gap: 1rem;
 		flex-wrap: wrap;
+	}
+	hr {
+		margin-top: 1rem;
+		width: 100%;
+		display: flex;
+		animation: -translateX linear both;
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+		will-change: filter;
+		transition: filter 300ms;
+	}
+	@keyframes -translateX {
+		from {
+			transform: translateX(-100%);
+		}
+	}
+
+	aside div h6 {
+		font-size: 3.5rem;
+		font-weight: 800;
 	}
 	aside div {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: #fff;
+	}
+
+	strong {
+		background: linear-gradient(-45deg in oklch, #f07030, blue);
 		border-radius: 1rem;
-		padding: 3rem;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		padding: 0.5rem;
+		color: white;
 	}
-	aside div:hover {
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		cursor: crosshair;
-	}
-	aside div h6 {
+	h2 {
 		font-size: 2.5rem;
-		font-weight: bold;
+		font-weight: 700;
+		line-height: 1.75;
 	}
-	aside div span {
-		font-size: 1rem;
+	@media (width < 1250px) {
+		h2 {
+			font-size: 1.75rem;
+		}
+		.video {
+			max-width: 94%;
+		}
+		hr {
+			animation: none;
+		}
 	}
 </style>

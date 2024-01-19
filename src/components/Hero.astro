@@ -5,46 +5,47 @@ import student2 from "../img/student2.jpg";
 ---
 
 <section
-	class="w-full h-full flex justify-around items-center mt-56 mb-32 relative"
+	class="w-full h-[70vh] lg:h-screen flex justify-center items-center relative"
 	id="home">
-	<aside class="max-w-[80vw] flex justify-">
-		<article class="w-1/2 h-full">
-			<div class="px-10 flex items-center flex-col">
+	<aside class="max-w-[96%] lg:max-w-[80%] flex justify-between gap-10">
+		<article class="w-full h-full">
+			<div class="flex items-center flex-col">
 				<p
-					class="text-6xl font-bold sm:text-1xl tracking-wide text-center leading-tight">
+					class="text-5xl lg:text-7xl font-bold sm:text-1xl text-center">
 					The Best
 				</p>
 				<h1
-					class="text-6xl font-bold sm:text-1xl tracking-wide text-center leading-none">
+					class="text-4xl lg:text-6xl font-bold sm:text-1xl text-center">
 					<strong class="important-text">remote Program</strong>
 				</h1>
 				<span
-					class="text-6xl font-bold sm:text-1xl tracking-wide text-center leading-tight"
+					class="text-5xl lg:text-7xl font-bold sm:text-1xl text-center"
 					>for Students</span
 				>
 				<p
-					class="text-2xl pt-10 text-center tracking-wide leading-8 opacity-70 max-w-[50ch]">
-					Excepteur sint occaecat cupidatat non proident sunt in culpa
-					qui officia deserunt mollit.
+					class="text-xl h-auto text-pretty w-full text-center opacity-50 font-semibold max-w-[50ch] pt-5">
+					As a Canadian English teacher with 30+ years, I bring
+					expertise in creating engaging lessons and nurturing a love
+					for English. Let's unlock your linguistic potential
+					together!
 				</p>
 			</div>
 		</article>
-		<article class="w-1/2 h-full gap-5">
-			<div class="grid-list h-full w-full">
+		<article class="w-full h-full" id="img-container">
+			<div class="grid-list  items-center h-full w-full">
 				<Image class="image-student" src={student1} alt="hero image" />
 				<Image class="image-student" src={student2} alt="hero image" />
 			</div>
 		</article>
 	</aside>
-	<div
-		class="fixed h-full w-full bg-transparent top-0 left-0 -z-10 background">
-		<div
-			class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
-		</div>
-	</div>
 </section>
 
 <style>
+	@media (width < 1250px) {
+		#img-container {
+			display: none;
+		}
+	}
 	.grid-list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -58,6 +59,7 @@ import student2 from "../img/student2.jpg";
 		object-fit: cover;
 		border-radius: 1rem;
 		outline: 0.5rem solid #ff7b22;
+		margin: 1rem;
 	}
 	.important-text {
 		background: linear-gradient(-45deg in oklch, #f07030, blue);

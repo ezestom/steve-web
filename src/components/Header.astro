@@ -4,27 +4,26 @@ import { Button } from "./Button.jsx";
 ---
 
 <section
-	class=" flex justify-around items-center fixed top-2 header"
+	class="flex justify-around items-center fixed top-2 header"
 	id="header">
 	<a href="/" class="flex gap-3 items-center">
 		<Avatar />
 		<h1 class="text-2xl font-bold flex flex-col items-center">
-			<strong class="text-2xl">I'm Steve</strong> 
-			<span class="text-sm">Canadian English </span>
+			<strong class="text-2xl">I'm Steve</strong>
+			<span class="text-sm">Canadian English</span>
 			<span class="text-sm">Teacher</span>
 		</h1>
 	</a>
 
 	<nav class="">
 		<ul class="flex justify-center gap-10 text-xl font-bold">
-			<li><a class="list-item" href="#home">Home</a></li>
 			<li><a class="list-item" href="#classes">Classes</a></li>
 			<li>
 				<a class="list-item" href="#experience">Experience</a>
 			</li>
 			<li><a class="list-item" href="#video">Video</a></li>
 			<li>
-				<a class="list-item" href="#students">Students</a>
+				<a class="list-item" href="#students">Reviews</a>
 			</li>
 		</ul>
 	</nav>
@@ -61,7 +60,12 @@ import { Button } from "./Button.jsx";
 			backdrop-filter: saturate(200%) blur(20px);
 			background-color: rgba(255, 255, 255, 0.5);
 			z-index: 10;
-			width: 90%;
+			width: 80%;
+		}
+	}
+	@media (width < 1250px) {
+		.header {
+			display: none;
 		}
 	}
 </style>

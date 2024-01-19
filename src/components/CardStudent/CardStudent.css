@@ -1,0 +1,119 @@
+.card {
+	width: 100%;
+	/* aspect-ratio: 2/2; */
+	display: block;
+	background: linear-gradient(135deg, cyan, blue);
+	position: relative;
+	border-radius: 0 0 1rem 1rem;
+	max-width: 300px;
+	border: 0.5rem solid blue;
+	transform: rotate(5deg);
+	transition: all 0.3s ease-in-out;
+	height: 100%;
+
+	&:before {
+		content: "";
+		height: 2.5rem;
+		width: 105.5%;
+		display: block;
+		border: 0.5rem solid blue;
+		border-radius: 1rem 1rem 0 0;
+		position: absolute;
+		top: -2.5rem;
+		left: -0.5rem;
+		background-color: white;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		background: #00d56e;
+		height: 0.9rem;
+		width: 0.9rem;
+		top: -1.7rem;
+		border-radius: 1rem;
+		left: 0.35rem;
+		box-shadow: 1.25rem 0 0 #33c4ff, 2.5rem 0 0 #9673ff;
+	}
+}
+.card:hover {
+	transform: rotate(0deg) scale(1.2);
+	z-index: 1;
+}
+#description {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 210px;
+	word-wrap: break-word; /* Nueva propiedad para romper palabras */
+}
+.userName,
+.date {
+	color: white;
+	font-weight: 600;
+}
+
+.open-btn {
+	position: absolute;
+	bottom: -1.5rem;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 3.5rem;
+	height: 3.5rem;
+	padding: 0.5rem;
+	border: 0.25rem solid blue;
+	border-radius: 100%;
+	background: white;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background: lightgray;
+		outline: 0.25rem dashed blue;
+	}
+}
+
+.open-btn > img {
+	width: 100%;
+	height: 100%;
+}
+
+figure > img {
+	border-radius: 1000px;
+	width: 125px;
+	height: 125px;
+	object-fit: cover;
+	margin: auto;
+	margin-top: 1rem;
+	outline: 0.25rem dashed white;
+}
+.card2 {
+	margin: auto;
+	width: 50%;
+	height: 75%;
+	/* width: 50%; */
+	/* aspect-ratio: 3/5; */
+	display: flex;
+	background: linear-gradient(135deg, cyan, blue);
+	/* position: relative; */
+	border-radius: 0 0 1rem 1rem;
+	/* max-height: 50%; */
+	border: 0.5rem solid blue;
+	/* transform: rotate(5deg); */
+	transition: all 0.3s ease-in-out;
+	border-radius: 1rem;
+	flex-direction: column;
+	justify-content: space-between;
+	place-items: center;
+}
+#description2 {
+	margin: 0 auto;
+	max-width: 80%;
+	height: 100%;
+}
+@media (width < 1250px) {
+	.card2 {
+		width: 96%;
+	}
+}
