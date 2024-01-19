@@ -4,25 +4,27 @@ import { Button } from "./Button.jsx";
 ---
 
 <section
-	class="w-full flex justify-around items-center py-2 fixed top-0 header"
+	class=" flex justify-around items-center fixed top-2 header"
 	id="header">
-	<a href="/" class="flex gap-2">
+	<a href="/" class="flex gap-3 items-center">
 		<Avatar />
-		<h1 class="text-2xl font-bold">
-			<strong class="text-3xl">Steve</strong> Web
+		<h1 class="text-2xl font-bold flex flex-col items-center">
+			<strong class="text-2xl">I'm Steve</strong> 
+			<span class="text-sm">Canadian English </span>
+			<span class="text-sm">Teacher</span>
 		</h1>
 	</a>
 
-	<nav>
-		<ul class="flex justify-center gap-10 text-2xl font-bold">
+	<nav class="">
+		<ul class="flex justify-center gap-10 text-xl font-bold">
 			<li><a class="list-item" href="#home">Home</a></li>
 			<li><a class="list-item" href="#classes">Classes</a></li>
 			<li>
 				<a class="list-item" href="#experience">Experience</a>
 			</li>
-			<li><a class="list-item" href="index.php?page=login">Login</a></li>
+			<li><a class="list-item" href="#video">Video</a></li>
 			<li>
-				<a class="list-item" href="index.php?page=register">Register</a>
+				<a class="list-item" href="#students">Students</a>
 			</li>
 		</ul>
 	</nav>
@@ -32,7 +34,7 @@ import { Button } from "./Button.jsx";
 
 <style>
 	.header {
-		z-index: 30;
+		z-index: 20;
 		margin: auto;
 		left: 0;
 		right: 0;
@@ -43,8 +45,6 @@ import { Button } from "./Button.jsx";
 	}
 	.list-item {
 		border-bottom: 0.25rem dashed transparent;
-
-		padding-bottom: 2px;
 	}
 	.list-item:hover {
 		color: #f07030;
@@ -56,12 +56,12 @@ import { Button } from "./Button.jsx";
 			position: fixed;
 			border-radius: 1rem;
 			outline: 0.5rem dashed #f07030;
-			top: 2rem;
+			top: 1rem;
 			height: 6rem;
 			backdrop-filter: saturate(200%) blur(20px);
 			background-color: rgba(255, 255, 255, 0.5);
 			z-index: 10;
-			width: 80%;
+			width: 90%;
 		}
 	}
 </style>

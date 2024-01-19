@@ -9,10 +9,9 @@ interface Props {
 const { title, description, link, textLink } = Astro.props;
 ---
 
-<article
-	class="max-w-[300px] h-[500px] flex items-center justify-around flex-col">
+<article class="flex items-center justify-around flex-col">
 	<h3 class="text-3xl font-semibold">{title}</h3>
-	<p class="text-md opacity-70 leading-loose">{description}</p>
+	<p class="text-md opacity-70 leading-loose my-3">{description}</p>
 	<a class="text-xl font-semibold" href={link}>{textLink}</a>
 </article>
 

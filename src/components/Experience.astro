@@ -1,15 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import professor from "../img/professor.jpg";
-import rotate from "../icons/rotate.svg";
 ---
 
 <section
-	class="h-screen w-full flex flex-col justify-center items-center"
+	class="w-full h-full flex flex-col justify-center items-center my-20 relative max-w-[80%] m-auto"
 	id="experience">
 	<aside class="my-20 text-center flex flex-col items-center justify-center">
 		<p class="font-semibold">EXPERIENCE</p>
-		<h2 >
+		<h2>
 			Specialized in <br />
 			<strong> English Education</strong>
 		</h2>
@@ -17,11 +16,6 @@ import rotate from "../icons/rotate.svg";
 	<article class="flex">
 		<aside class="w-1/2 h-full">
 			<div class="professor-container h-full">
-				<Image
-					src={rotate}
-					alt="English professor"
-					class="w-36 translate-x-56 translate-y-16 rotate"
-				/>
 				<Image
 					src={professor}
 					alt="English professor"
@@ -33,13 +27,13 @@ import rotate from "../icons/rotate.svg";
 			class="w-1/2 flex flex-col items-center justify-center explain-container h-full">
 			<div class="px-10">
 				<p
-					class="text-7xl font-bold sm:text-1xl tracking-wide text-center leading-tight">
+					class="text-6xl font-bold sm:text-1xl tracking-wide text-center leading-tight">
 					Over 30 Years in
 				</p>
 				<h1
 					class="text-6xl font-bold sm:text-1xl tracking-wide text-center leading-none">
 					<span class="important-text">Distant learning</span>
-					 for Skill Development
+					for Skill Development
 				</h1>
 			</div>
 			<p
@@ -51,7 +45,6 @@ import rotate from "../icons/rotate.svg";
 			</p>
 		</aside>
 	</article>
-	
 </section>
 
 <style>
@@ -59,7 +52,6 @@ import rotate from "../icons/rotate.svg";
 		width: auto;
 		height: 100%;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
@@ -80,12 +72,7 @@ import rotate from "../icons/rotate.svg";
 		font-weight: 700;
 		line-height: 1.75;
 	}
-	/* .explain-container {
-		background-image: url("../img/about-shape-4.svg");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 55%;
-	} */
+
 	.important-text {
 		color: #f07030;
 	}

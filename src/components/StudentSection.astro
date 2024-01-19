@@ -1,0 +1,37 @@
+---
+import { CardStudent } from "./CardStudent.jsx";
+import photo from "../img/eze.jpg";
+---
+
+<section class="w-full h-full flex flex-col text-center" id="students">
+	<div class="mb-40">
+		<p class="font-semibold">STUDENTS</p>
+		<h2>Online Classes <br /> <strong>For Remote Learning</strong></h2>
+	</div>
+	<article>
+		<CardStudent studentImg={photo.src} client:visible />
+		<CardStudent studentImg={photo.src} client:visible />
+		<CardStudent studentImg={photo.src} client:visible />
+		<CardStudent studentImg={photo.src} client:visible />
+	</article>
+</section>
+
+<style>
+	article {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 1rem;
+		justify-items: center;
+	}
+	strong {
+		background: linear-gradient(-45deg in oklch, #f07030, blue);
+		border-radius: 1rem;
+		padding: 0.5rem;
+		color: white;
+	}
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		line-height: 1.75;
+	}
+</style>

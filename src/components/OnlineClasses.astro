@@ -7,14 +7,15 @@ import star from "../icons/star.svg";
 import stars from "../icons/stars.svg";
 ---
 
-<section class="w-full h-full max-h-screen flex flex-col" id="classes">
-	<aside class="my-40">
+<section
+	class="w-full h-full flex flex-col justify-center items-center my-40 relative" id="classes">
+	<div class="mb-40">
 		<p class="font-semibold">CATEGORIES</p>
 		<h2>Online Classes <br /> <strong>For Remote Learning</strong></h2>
-	</aside>
-	<aside class="w-[90%] h-screen flex flex-wrap justify-evenly gap-3">
+	</div>
+	<aside class="md:w-[80%] sm:w-full h-auto flex flex-wrap justify-evenly gap-1">
 		<div class="relative">
-			<Image src={book} alt="book" class="absolute top-1 right-1 w-8" />
+			<Image src={book} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				title="Beginner"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
@@ -23,7 +24,7 @@ import stars from "../icons/stars.svg";
 			/>
 		</div>
 		<div class="relative">
-			<Image src={book2} alt="book" class="absolute top-1 right-1 w-8" />
+			<Image src={book2} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				title="Intermediate"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
@@ -32,7 +33,7 @@ import stars from "../icons/stars.svg";
 			/>
 		</div>
 		<div class="relative">
-			<Image src={star} alt="book" class="absolute top-1 right-1 w-8" />
+			<Image src={star} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				title="Professional"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
@@ -41,7 +42,7 @@ import stars from "../icons/stars.svg";
 			/>
 		</div>
 		<div class="relative">
-			<Image src={stars} alt="book" class="absolute top-1 right-1 w-8" />
+			<Image src={stars} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				title="Expert"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
@@ -59,6 +60,13 @@ import stars from "../icons/stars.svg";
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+	}
+	aside {
+		display: grid;
+		place-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+		gap: 1rem;
+		flex-wrap: wrap;
 	}
 
 	h2 {
