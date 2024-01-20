@@ -21,8 +21,8 @@ export function Counter({ initialValue, speed, children, text }) {
 	}, [counterValue, initialValue, speed]);
 
 	return (
-		<div className="font-bold">
-			<p className="flex items-center justify-center">
+		<div className="font-bold ">
+			<p className="flex items-center justify-center text-center">
 				<span className=" value span" akhi={initialValue}>
 					<span> {children}</span>
 					{counterValue}

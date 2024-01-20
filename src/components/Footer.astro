@@ -7,7 +7,7 @@ import youtube from "../icons/youtube.svg";
 import world from "../icons/world.svg";
 ---
 
-<section class="max-w-[80%] min-h-56 m-auto flex-col flex" id="contact">
+<section class="max-w-[80%] w-full min-h-56 m-auto flex-col flex" id="contact">
 	<Form client:visible />
 	<div
 		class="w-full my-5 flex gap-1 lg:justify-between justify-center -z-1 items-center flex-wrap footer">
@@ -74,7 +74,7 @@ import world from "../icons/world.svg";
 		}
 		@media (width < 1200px) {
 			section {
-				width: 96%;
+				max-width: 96%;
 				margin-bottom: 3rem;
 			}
 			.footer {

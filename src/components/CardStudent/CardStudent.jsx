@@ -44,7 +44,7 @@ export function CardStudent({ studentImg, text, name, date }) {
 						</span>
 						<p
 							id="description"
-							className=" text-white font-semibold text-md p-2 ">
+							className=" text-white font-semibold text-md p-2 text-pretty ">
 							{text}
 						</p>
 					</figure>
@@ -70,7 +70,7 @@ export function CardStudent({ studentImg, text, name, date }) {
 								</span>
 								<p
 									id="description2"
-									className=" text-white font-semibold text-1xl py-5 ">
+									className=" text-white font-semibold text-1xl py-1 text-pretty ">
 									{text}
 								</p>
 							</figure>

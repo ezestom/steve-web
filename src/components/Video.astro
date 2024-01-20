@@ -17,13 +17,13 @@ import { Counter } from "../components/Counter/Counter";
 		</h2>
 	</aside>
 	<article
-		class="max-w-[80%] w-full flex flex-col items-center justify-between">
+		class="max-w-[80%] w-full flex flex-col items-center justify-center article-container">
 		<div
-			class="relative mb-32 flex items-center justify-center video-container">
+			class="relative mb-32 flex items-center justify-center video-container w-full">
 			<Image
 				src={rotate}
 				alt="video decoration"
-				class="absolute -top-20 right-24 w-40 rotate-90"
+				class="absolute -top-20 right-40 w-40 rotate-90"
 			/>
 			<figure class="video">
 				<BlurVideo
@@ -33,7 +33,7 @@ import { Counter } from "../components/Counter/Counter";
 				/>
 			</figure>
 		</div>
-		<aside>
+		<aside class="flex">
 			<div class="flex items-center justify-center">
 				<Counter
 					client:visible
@@ -121,6 +121,7 @@ import { Counter } from "../components/Counter/Counter";
 	@keyframes -translateX {
 		from {
 			transform: translateX(-100%);
+			opacity: 0.3;
 		}
 	}
 
@@ -151,10 +152,13 @@ import { Counter } from "../components/Counter/Counter";
 			font-size: 1.75rem;
 		}
 		.video {
-			max-width: 94%;
+			min-width: 98%;
 		}
 		hr {
 			animation: none;
+		}
+		.article-container {
+			justify-content: center;
 		}
 	}
 </style>

@@ -107,9 +107,18 @@ figure > img {
 	justify-content: space-between;
 	place-items: center;
 }
+.card2 > .stuff > figure {
+	font-size: 1.15rem;
+	width: 100%;
+}
+.card2 > .stuff > figure > img {
+	border-radius: 1rem;
+	width: 200px;
+	height: 200px;
+}
 #description2 {
 	margin: 0 auto;
-	max-width: 80%;
+	max-width: 90%;
 	height: 100%;
 }
 @media (width < 1250px) {
