@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import CardClasses from "./CardClasses.astro";
+import { CardClasses } from "./CardClasses/CardClasses.jsx";
+import check from "../icons/check.svg";
+import bookImage from "../img/books2.avif";
 import book from "../icons/book.svg";
 import book2 from "../icons/book2.svg";
 import star from "../icons/star.svg";
@@ -19,37 +21,53 @@ import stars from "../icons/stars.svg";
 		<div class="relative">
 			<Image src={book} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
+				client:visible
 				title="Beginner"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-				link="https://www.google.com"
+				icon={check.src}
 				textLink="1 Class per week"
+				bookImg={bookImage.src}
+				amount="5%"
+				describeOffer="You will have one class per week, and you will also have a free class."
 			/>
 		</div>
 		<div class="relative">
 			<Image src={book2} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
+				client:visible
 				title="Intermediate"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-				link="https://www.google.com"
+				icon={check.src}
 				textLink="2 Class per week"
+				bookImg={bookImage.src}
+				amount="10%"
+				describeOffer="You will have two class per week, and you will also have a free class."
 			/>
 		</div>
 		<div class="relative">
-			<Image src={star} alt="book" class="absolute top-3 right-3 w-8" />
+			<Image src={star} alt="star" class="absolute top-3 right-3 w-8" />
 			<CardClasses
+				client:visible
 				title="Professional"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-				link="https://www.google.com"
+				icon={check.src}
 				textLink="3 Class per week"
+				bookImg={bookImage.src}
+				amount="15%"
+				describeOffer="You will have 3 class per week, and you will also have a free class."
 			/>
 		</div>
 		<div class="relative">
-			<Image src={stars} alt="book" class="absolute top-3 right-3 w-8" />
+			<Image src={stars} alt="stars" class="absolute top-3 right-3 w-8" />
 			<CardClasses
+				client:visible
 				title="Expert"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
-				link="https://www.google.com"
+				icon={check.src}
 				textLink="4 Class per week"
+				bookImg={bookImage.src}
+				amount="20%"
+				describeOffer="You will have four class per week, and you will also have a free class."
 			/>
 		</div>
 	</aside>

@@ -6,9 +6,10 @@
 	justify-items: center;
 	padding: 2rem;
 	border-radius: 1rem;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	background-color: #fafafa;
 	flex-wrap: wrap;
+	z-index: 40;
 }
 hr {
 	width: 25%;

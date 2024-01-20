@@ -8,14 +8,13 @@ import Video from "../components/Video.astro";
 import Layout from "../layouts/Layout.astro";
 import Writing from "../components/Writing.astro";
 import StudentSection from "../components/StudentSection.astro";
-import HamburgerMenu from "../components/HamburgerMenu.astro";
-import { defineMiddleware } from "astro:middleware";
+import { HamburgerMenu } from "../components/HamburgerMenu/HamburgerMenu.jsx";
 ---
 
 <Layout title="Steve English Teacher ">
 	<header class="header">
+		<HamburgerMenu client:visible />
 		<Header />
-		<HamburgerMenu />
 
 		<Hero />
 	</header>

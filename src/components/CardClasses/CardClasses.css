@@ -1,0 +1,24 @@
+.cards-classes-article {
+	background-color: #fafafa;
+	border-radius: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+}
+
+/* a {
+	transition: all 0.2s ease-in-out;
+	border-bottom: transparent dashed 0.25rem;
+}
+a:hover {
+	border-bottom: 0.25rem dashed #ff7b22;
+	color: #ff7b22;
+} */
+.btn-card-classes {
+	transition: all 0.2s ease-in-out;
+	border-bottom: transparent dashed 0.25rem;
+}
+.btn-card-classes:hover {
+	color: #f07030;
+	border-bottom: 0.25rem dashed #f07030;
+	cursor: pointer;
+}

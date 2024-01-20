@@ -4,8 +4,9 @@ import open from "../../icons/open.svg";
 import { useState } from "react";
 import user from "../../icons/user.svg";
 import dateIcon from "../../icons/date.svg";
+import world from "../../icons/world.svg";
 
-export function CardStudent({ studentImg, text, name, date }) {
+export function CardStudent({ studentImg, text, name, date, link }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const openDialog = () => {
 		setIsOpen(true);
@@ -44,7 +45,7 @@ export function CardStudent({ studentImg, text, name, date }) {
 						</span>
 						<p
 							id="description"
-							className=" text-white font-semibold text-md p-2 text-pretty ">
+							className=" text-white font-semibold text-md p-2 text-balance ">
 							{text}
 						</p>
 					</figure>
@@ -55,11 +56,15 @@ export function CardStudent({ studentImg, text, name, date }) {
 				</a>
 			</div>
 			{isOpen && (
-				<dialog open className="z-30  w-screen h-screen m-auto  fixed">
+				<dialog open className="z-50  w-screen h-screen m-auto  fixed">
 					<div className="card2">
 						<div className="stuff">
 							<figure>
-								<img src={studentImg} alt={studentImg} />
+								<img
+									src={studentImg}
+									alt={studentImg}
+									className="mt-10"
+								/>
 								<h4 className="flex items-center justify-center gap-1 pt-1 userName">
 									<img src={user.src} alt="user-icon" />
 									{name}
@@ -70,9 +75,16 @@ export function CardStudent({ studentImg, text, name, date }) {
 								</span>
 								<p
 									id="description2"
-									className=" text-white font-semibold text-1xl py-1 text-pretty ">
+									className=" text-white font-semibold text-sm md:text-xl py-1 text-pretty ">
 									{text}
 								</p>
+								<a
+									target="_blank"
+									href={link}
+									className="flex items-center justify-center gap-1  font-bold hover:text-orange-400">
+									<img src={world.src} alt="icon world" />
+									Link to recommendation
+								</a>
 							</figure>
 						</div>
 					</div>
