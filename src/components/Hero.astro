@@ -5,11 +5,11 @@ import student2 from "../img/student2.jpg";
 ---
 
 <section
-	class="w-full h-[70vh] lg:h-screen flex justify-center items-center relative"
+	class="w-full h-[75vh] lg:h-screen flex justify-center items-center relative"
 	id="home">
-	<aside class="max-w-[96%] lg:max-w-[80%] flex justify-between gap-10">
-		<article class="w-full h-full">
-			<div class="flex items-center flex-col">
+	<aside class="max-w-[96%] lg:max-w-[80%]">
+		<article class="w-full h-full flex items-center justify-center">
+			<div class="flex items-center flex-col gap-2" id="text-container">
 				<p
 					class="text-5xl lg:text-7xl font-bold sm:text-1xl text-center">
 					The Best
@@ -32,7 +32,7 @@ import student2 from "../img/student2.jpg";
 			</div>
 		</article>
 		<article class="w-full h-full" id="img-container">
-			<div class="grid-list  items-center h-full w-full">
+			<div class="grid-list h-full w-full" id="images">
 				<Image class="image-student" src={student1} alt="hero image" />
 				<Image class="image-student" src={student2} alt="hero image" />
 			</div>
@@ -48,9 +48,10 @@ import student2 from "../img/student2.jpg";
 	}
 	.grid-list {
 		display: grid;
+		place-items: center;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 1rem;
-		background-image: url("../img/hero-shape-2.png");
+		background-image: url("../img/hero-shape-3.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
@@ -70,5 +71,47 @@ import student2 from "../img/student2.jpg";
 	}
 	.background {
 		background-color: #fafafa;
+	}
+	@keyframes scale-up {
+		to {
+			scale: 1.5;
+		}
+	}
+	@keyframes fade-away {
+		to {
+			opacity: 0;
+		}
+	}
+	#home {
+		view-timeline: --scroll;
+	}
+
+	/* Apple animation Midu */
+	#img-container {
+		z-index: -1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		animation:
+			scale-up both ease-in-out,
+			fade-away both linear;
+		animation-timeline: --scroll;
+		animation-range:
+			exit 0% exit 100%,
+			exit 50% exit 70%;
+	}
+	.image-student:nth-child(1) {
+		transform: translate(-5em, 0);
+	}
+	.image-student:nth-child(2) {
+		transform: translate(5rem, 0);
+	}
+
+	#text-container {
+		/* position: fixed; */
+		animation: fade-away both linear;
+		animation-timeline: --scroll;
+		animation-range: exit 20% exit 90%;
 	}
 </style>

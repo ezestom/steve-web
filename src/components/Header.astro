@@ -16,7 +16,7 @@ import { Button } from "./Button.jsx";
 	</a>
 
 	<nav class="">
-		<ul class="flex justify-center gap-10 text-xl font-bold">
+		<ul class="flex justify-center gap-10 text-xl font-extrabold">
 			<li><a class="list-item" href="#classes">Classes</a></li>
 			<li>
 				<a class="list-item" href="#experience">Experience</a>
@@ -33,6 +33,7 @@ import { Button } from "./Button.jsx";
 
 <style>
 	.header {
+		max-height: 5rem;
 		z-index: 20;
 		margin: auto;
 		left: 0;
@@ -52,6 +53,8 @@ import { Button } from "./Button.jsx";
 
 	@keyframes enhance-header {
 		to {
+			padding: 0 1rem;
+			justify-content: space-between;
 			position: fixed;
 			border-radius: 1rem;
 			outline: 0.5rem dashed #f07030;
