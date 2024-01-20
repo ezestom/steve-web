@@ -1,4 +1,4 @@
-<button class="menu-btn p-1 m-2 z-30" popovertarget="menu">
+<!-- <button class="menu-btn p-1 m-2 z-30" popovertarget="menu">
 	<img
 		src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
 		alt=""
@@ -10,6 +10,18 @@
 		class="close-btn p-1 m-2"
 		popovertarget="menu"
 		popovertargetaction="hide">
+		<span>❌</span>
+		<span class="sr-only">Close</span>
+	</button> -->
+<button class="menu-btn p-1 m-2" data-toggle="popover" data-target="#menu">
+	<img
+		src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
+		alt=""
+	/>
+</button>
+
+<div class="popover" role="menu" id="menu">
+	<button class="close-btn p-1 m-2" data-toggle="popover" data-target="#menu">
 		<span>❌</span>
 		<span class="sr-only">Close</span>
 	</button>
