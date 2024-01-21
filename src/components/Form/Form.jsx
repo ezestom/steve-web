@@ -22,7 +22,7 @@ export function Form() {
 			<article class="w-full flex justify-between flex-wrap gap-5">
 				<div class="max-w-[50ch] ">
 					<span className="text-4xl font-bold">Contact</span>
-					<h5 class="text-2xl pt-2  text-pretty flex flex-col">
+					<h5 class="text-xl md:text-2xl pt-2  text-pretty flex flex-col">
 						If you have any questions, please contact me 📩
 					</h5>
 				</div>
@@ -30,7 +30,7 @@ export function Form() {
 			<hr />
 			<h2 className="text-2xl font-semibold ">Ready to get started?</h2>
 
-			<div className=" flex justify-end w-full">
+			<div className=" flex justify-between w-full ">
 				<button
 					href="#open-dialog"
 					onClick={openDialog} // Usar la función openDialog aquí
@@ -53,7 +53,7 @@ export function Form() {
 			</div>
 
 			{dialog && ( // Mostrar el diálogo solo cuando dialog es true
-				<dialog open>
+				<dialog open className="">
 					<div className="form-container-dialog">
 						<form
 							method="POST"

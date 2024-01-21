@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./CardClasses.css";
+import whatsapp from "../../icons/whatsapp.svg";
 
 export function CardClasses({
 	title,
@@ -38,7 +39,7 @@ export function CardClasses({
 		<section>
 			<article class="flex items-center justify-around flex-col cards-classes-article ">
 				<h3 class="text-3xl font-semibold">{title}</h3>
-				<p class="text-xl h-auto text-pretty w-full text-center opacity-50 font-semibold max-w-[50ch] py-5 pt-5">
+				<p class="text-xl h-auto text-pretty w-full text-center opacity-50 font-semibold max-w-[50ch] py-10 ">
 					{description}
 				</p>
 				<a
@@ -52,11 +53,11 @@ export function CardClasses({
 
 			{isOpen && (
 				<dialog open>
-					<section class="rounded-2xl bg-black/60 shadow-2xl md:grid md:grid-cols-3 items-center max-w-[96%] xl:max-w-[60%]">
+					<section class="rounded-2xl bg-black/60 shadow-2xl md:grid md:grid-cols-3 items-center max-w-[96%] xl:max-w-[60%] p-2">
 						<img
 							alt="Trainer"
 							src={bookImg}
-							class="h-32 w-full object-cover rounded-2xl   md:h-full"
+							class="h-32 w-full object-cover rounded-xl  md:h-full"
 						/>
 
 						<div class="p-4 text-center sm:p-6 md:col-span-2 lg:p-8 text-white">
@@ -75,9 +76,12 @@ export function CardClasses({
 							</h2>
 
 							<a
-								class="mt-8 inline-block  bg-white w-2/3 py-4 text-sm font-bold uppercase tracking-widest text-black rounded-2xl "
-								href="">
+								id="btn-card-classes"
+								class="mt-8 m-auto bg-white w-2/3 py-4 text-sm font-bold uppercase tracking-widest text-black rounded-2xl flex justify-center items-center gap-1 "
+								target="_blank"
+								href="https://wa.me/+5491168641122">
 								Get {title} Discount
+								<img src={whatsapp.src} alt="whatsapp icon" />
 							</a>
 
 							<p class="mt-8 text-xs font-medium uppercase text-gray-400">

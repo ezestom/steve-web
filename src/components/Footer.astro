@@ -5,9 +5,11 @@ import twitter from "../icons/twitter.svg";
 import linkedin from "../icons/linkedin.svg";
 import youtube from "../icons/youtube.svg";
 import world from "../icons/world.svg";
+import OpenPeeps from "./OpenPeeps.astro";
 ---
 
-<section class="max-w-[80%] w-full min-h-56 m-auto flex-col flex" id="contact">
+<section class="max-w-[80%] w-full min-h-56 m-auto flex-col flex relative" id="contact">
+	<OpenPeeps/>
 	<Form client:visible />
 	<div
 		class="w-full my-5 flex gap-1 lg:justify-between justify-center -z-1 items-center flex-wrap footer">
@@ -69,7 +71,7 @@ import world from "../icons/world.svg";
 		strong {
 			background: linear-gradient(-45deg in oklch, #f07030, blue);
 			border-radius: 1rem;
-			padding: 0.5rem;
+			padding: 1rem;
 			color: white;
 		}
 		@media (width < 1200px) {
@@ -87,7 +89,7 @@ import world from "../icons/world.svg";
 			background: #fafafa;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 			border-bottom: 1px solid var(--border-line);
-			padding: 1rem;
+			padding: 1rem 2rem;
 			border-radius: 1rem;
 			border-bottom: 1px solid var(--border-line);
 		}

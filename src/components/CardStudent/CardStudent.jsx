@@ -35,19 +35,21 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 				<div className="stuff">
 					<figure>
 						<img src={studentImg} alt={studentImg} />
-						<h4 className="flex items-center justify-center gap-1 pt-1 userName">
-							<img src={user.src} alt="user-icon" />
-							{name}
-						</h4>
-						<span className="flex items-center justify-center gap-1 date">
-							<img src={dateIcon.src} alt="date-icon" />
-							{date}
-						</span>
-						<p
-							id="description"
-							className=" text-white font-semibold text-md p-2 text-balance ">
-							{text}
-						</p>
+						<div className="-mt-8">
+							<h4 className="flex items-center justify-center gap-1  userName">
+								<img src={user.src} alt="user-icon" />
+								{name}
+							</h4>
+							<span className="flex items-center justify-center gap-1 opacity-50 text-sm date">
+								<img src={dateIcon.src} alt="date-icon" />
+								{date}
+							</span>
+							<p
+								id="description"
+								className=" text-white font-semibold text-md p-2 text-balance ">
+								{text}
+							</p>
+						</div>
 					</figure>
 				</div>
 				<a className="open-btn" onClick={openDialog}>
@@ -57,7 +59,7 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 			</div>
 			{isOpen && (
 				<dialog open className="z-50  w-screen h-screen m-auto  fixed">
-					<div className="card2">
+					<div className="card2 relative">
 						<div className="stuff">
 							<figure>
 								<img
@@ -69,21 +71,21 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 									<img src={user.src} alt="user-icon" />
 									{name}
 								</h4>
-								<span className="flex items-center justify-center gap-1 date">
+								<span className="flex items-center justify-center gap-1 opacity-50 text-sm date">
 									<img src={dateIcon.src} alt="date-icon" />
 									{date}
 								</span>
 								<p
 									id="description2"
-									className=" text-white font-semibold text-sm md:text-xl py-1 text-pretty ">
+									className=" text-white font-semibold text-md md:text-xl py-1 text-pretty ">
 									{text}
 								</p>
 								<a
 									target="_blank"
 									href={link}
-									className="flex items-center justify-center gap-1  font-bold hover:text-orange-400">
-									<img src={world.src} alt="icon world" />
+									className="flex items-center justify-center gap-1  font-bold hover:text-white hover:underline underline-offset-4  absolute bottom-2 m-auto w-full decoration-dashed	">
 									Link to recommendation
+									<img src={world.src} alt="icon world" />
 								</a>
 							</figure>
 						</div>

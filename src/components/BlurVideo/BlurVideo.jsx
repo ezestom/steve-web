@@ -41,7 +41,7 @@ export function BlurVideo({ urlYoutube, img }) {
 				/>
 			</a>
 			{isOpen && (
-				<dialog open className="z-30 w-screen h-screen m-auto  fixed">
+				<dialog open className="z-50 w-screen h-screen m-auto  fixed">
 					<iframe
 						className="m-auto w-[96%] lg:w-[50%] aspect-video rounded-lg shadow-2xl"
 						src={urlYoutube}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./HamburgerMenu.css";
+import avatar from "../../img/avatar-profesor.avif";
 
 export function HamburgerMenu() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -10,22 +11,35 @@ export function HamburgerMenu() {
 
 	return (
 		<>
-			<button
-				className="menu-btn"
-				onClick={toggleMenu}
-				popovertarget="menu">
+			<div
+				className="w-full top-0 absolute h-12 flex items-center bg-slate-100 border-b  "
+				id="header-mobile">
 				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
-					alt=""
+					className="size-10 m-2 object-cover rounded-full border-2 border-slate-200 shadow-md"
+					src={avatar.src}
+					alt="avatar professor"
 				/>
-			</button>
+				<h1 class="font-bold flex flex-col items-start w-full m-auto">
+					<strong class="text-md">I'm Steve</strong>
+					<span class="text-sm">Canadian English Professor</span>
+				</h1>
+				<button
+					className="menu-btn"
+					onClick={toggleMenu}
+					popovertarget="menu">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
+						alt=""
+					/>
+				</button>
+			</div>
 
 			{isOpen && (
 				<div popover role="menu" id="menu">
 					<ul className="item-container">
 						<li>
 							<a className="item" href="#classes">
-								Classe
+								Classes
 							</a>
 						</li>
 						<li>

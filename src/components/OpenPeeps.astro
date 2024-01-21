@@ -1,0 +1,41 @@
+<div class="peeps-container">
+	<span class="css-peeps"></span>
+</div>
+
+<style>
+	/* Open Peeps */
+	@media (width < 1250px) {
+		.peeps-container {
+			display: none;
+		}
+	}
+
+	.css-peeps {
+		--peep-head: twists2;
+		--peep-face: smile;
+		--peep-accessory: glasses1;
+		--peep-body: laptop;
+
+		--peep-hat-color: #fcfcfc;
+		--peep-hair-color: #000000;
+		--peep-skin-color: #ffffff;
+
+		--peep-facial-hair-color: #ffffff;
+		--peep-object-color: #ffffff;
+		--peep-clothes-color: #000000;
+
+		/* --peep-body-offset-x: -28px;
+		--peep-body-offset-y: -34px; */
+
+		display: inline-block;
+		position: absolute;
+		width: 430px;
+		right: 5%;
+		top: -16%;
+		height: 100%;
+		background: transparent;
+		z-index: -1;
+		transform: scaleX(-1);
+		/* border: 2px solid var(--peep-accessory-color); */
+	}
+</style>
