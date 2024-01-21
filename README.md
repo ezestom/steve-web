@@ -1,3 +1,10 @@
+
+>[!IMPORTANT]
+> Steve Web
+> Canadian English Proffesor
+>
+![image](https://github.com/ezestom/steve-web/assets/100095709/fdbd8ff5-98a5-4379-876a-3ff2169e13e2)
+
 # Astro Starter Kit: Basics
 
 ```sh
