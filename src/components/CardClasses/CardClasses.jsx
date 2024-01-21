@@ -18,20 +18,20 @@ export function CardClasses({
 		document.body.style.overflow = "hidden";
 
 		// Obtener el elemento con la clase .header y detener su desplazamiento
-		const headerElement = document.getElementById("header");
-		if (headerElement) {
-			headerElement.style.display = "none";
-		}
+		// const headerElement = document.getElementById("header");
+		// if (headerElement) {
+		// 	headerElement.style.display = "none";
+		// }
 	};
 	const closeDialog = () => {
 		setIsOpen(false);
 		// Restaurar el desplazamiento
 		document.body.style.overflow = "auto";
 
-		const headerElement = document.getElementById("header");
-		if (headerElement) {
-			headerElement.style.display = "flex";
-		}
+		// const headerElement = document.getElementById("header");
+		// if (headerElement) {
+		// 	headerElement.style.display = "flex";
+		// }
 	};
 
 	return (
