@@ -35,7 +35,7 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 				<div className="stuff">
 					<figure>
 						<img src={studentImg} alt={studentImg} />
-						<div className="-mt-8">
+						<div className="-mt-6">
 							<h4 className="flex items-center justify-center gap-1  userName">
 								<img src={user.src} alt="user-icon" />
 								{name}
@@ -65,28 +65,33 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 								<img
 									src={studentImg}
 									alt={studentImg}
-									className="mt-10"
+									// className="mt-10"
 								/>
-								<h4 className="flex items-center justify-center gap-1 pt-1 userName">
-									<img src={user.src} alt="user-icon" />
-									{name}
-								</h4>
-								<span className="flex items-center justify-center gap-1 opacity-50 text-sm date">
-									<img src={dateIcon.src} alt="date-icon" />
-									{date}
-								</span>
-								<p
-									id="description2"
-									className=" text-white font-semibold text-md md:text-xl py-1 text-pretty ">
-									{text}
-								</p>
-								<a
-									target="_blank"
-									href={link}
-									className="flex items-center justify-center gap-1  font-bold hover:text-white hover:underline underline-offset-4  absolute bottom-2 m-auto w-full decoration-dashed	">
-									Link to recommendation
-									<img src={world.src} alt="icon world" />
-								</a>
+								<div className="info-card2-container">
+									<h4 className="flex  items-center justify-center gap-1 pt-1 userName">
+										<img src={user.src} alt="user-icon" />
+										{name}
+									</h4>
+									<span className="flex items-center justify-center gap-1 opacity-50 text-sm date">
+										<img
+											src={dateIcon.src}
+											alt="date-icon"
+										/>
+										{date}
+									</span>
+									<p
+										id="description2"
+										className=" text-white font-semibold text-md md:text-xl py-1 text-balance ">
+										{text}
+									</p>
+									<a
+										target="_blank"
+										href={link}
+										className="flex items-center justify-center gap-1  font-bold hover:text-white hover:underline underline-offset-4  absolute bottom-2 m-auto w-full decoration-dashed	">
+										Link to recommendation
+										<img src={world.src} alt="icon world" />
+									</a>
+								</div>
 							</figure>
 						</div>
 					</div>
