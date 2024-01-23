@@ -37,9 +37,9 @@ export function CardClasses({
 
 	return (
 		<section>
-			<article class="flex items-center justify-around flex-col cards-classes-article ">
+			<article class="cards-classes-article  ">
 				<h3 class="text-3xl font-semibold">{title}</h3>
-				<p class="text-xl h-auto text-pretty w-full text-center opacity-50 font-semibold max-w-[50ch] py-10 ">
+				<p class="text-xl h-auto text-pretty w-full text-center opacity-50 font-semibold  py-5 transition-all  ">
 					{description}
 				</p>
 				<a

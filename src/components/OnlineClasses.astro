@@ -10,20 +10,19 @@ import stars from "../icons/stars.svg";
 ---
 
 <section
-	class="w-full h-full flex flex-col justify-center items-center relative mb-20"
+	class="w-full h-full flex flex-col justify-center items-center relative mb-20 text-center"
 	id="classes">
 	<div class="mb-20">
 		<p class="font-semibold">CATEGORIES</p>
 		<h2>Online Classes <br /> <strong>For Remote Learning</strong></h2>
 	</div>
-	<aside
-		class="md:w-[80%] sm:w-full h-auto flex flex-wrap justify-evenly gap-1">
-		<div class="relative">
+	<aside class="md:w-[80%] sm:w-full h-full gap-1">
+		<div class="relative h-full flex">
 			<Image src={book} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				client:visible
 				title="Beginner"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				description="Welcome to our Beginner English class! In this course, you'll dive into the basics of the language, from the alphabet to everyday phrases. You'll learn how to introduce yourself, talk about your family, and navigate daily situations. This course lays the foundation for your journey towards fluency."
 				icon={check.src}
 				textLink="1 Class per week"
 				bookImg={bookImage.src}
@@ -31,12 +30,12 @@ import stars from "../icons/stars.svg";
 				describeOffer="You will have one class per week, and you will also have a free class."
 			/>
 		</div>
-		<div class="relative">
+		<div class="relative h-full flex">
 			<Image src={book2} alt="book" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				client:visible
 				title="Intermediate"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				description="In our Intermediate class, you'll delve deeper into grammar and expand your vocabulary. We'll focus on constructing more complex conversations, discussing current topics, and understanding common idiomatic expressions. Get ready to enhance your listening comprehension and communication skills in more challenging situations."
 				icon={check.src}
 				textLink="2 Classes per week"
 				bookImg={bookImage.src}
@@ -44,12 +43,12 @@ import stars from "../icons/stars.svg";
 				describeOffer="You will have two class per week, and you will also have a free class."
 			/>
 		</div>
-		<div class="relative">
+		<div class="relative h-full flex">
 			<Image src={star} alt="star" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				client:visible
 				title="Professional"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				description="The Professional English class is tailored for those aiming to master the language in a professional setting. You'll learn to compose business emails, participate in meetings, and deliver reports effectively. We'll also concentrate on industry-specific language, preparing you for success in the workplace."
 				icon={check.src}
 				textLink="3 Classes per week"
 				bookImg={bookImage.src}
@@ -57,12 +56,12 @@ import stars from "../icons/stars.svg";
 				describeOffer="You will have 3 class per week, and you will also have a free class."
 			/>
 		</div>
-		<div class="relative">
+		<div class="relative h-full flex">
 			<Image src={stars} alt="stars" class="absolute top-3 right-3 w-8" />
 			<CardClasses
 				client:visible
 				title="Expert"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl. Sed euismod, diam id tincidunt ultrices, nunc libero tincidunt urna, vitae aliquam nisl libero vitae nisl."
+				description="Congratulations, English expert! This class will challenge you with advanced readings, sophisticated debates, and in-depth analyses of literary texts. You'll refine your pronunciation, perfect your grammar, and explore the cultural richness of the English language. You're about to achieve a level of fluency that will open doors to limitless opportunities."
 				icon={check.src}
 				textLink="4 Classes per week"
 				bookImg={bookImage.src}
@@ -74,12 +73,6 @@ import stars from "../icons/stars.svg";
 </section>
 
 <style>
-	section {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
 	aside {
 		display: grid;
 		place-items: center;
