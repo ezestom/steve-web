@@ -37,15 +37,14 @@ export function CardClasses({
 
 	return (
 		<section>
-			<article class="cards-classes-article  ">
-				<h3 class="text-3xl font-semibold">{title}</h3>
-				<p class="text-xl h-auto text-pretty w-full text-center opacity-50 font-semibold  py-5 transition-all  ">
+			<article className="cards-classes-article  ">
+				<h3 className="text-3xl font-semibold">{title}</h3>
+				<p className=" h-auto  w-full opacity-50 font-semibold  py-5 transition-all text-center text-balance  ">
 					{description}
 				</p>
 				<a
 					className="btn-card-classes flex items-center justify-center gap-1 font-bold text-xl"
-					onClick={openDialog}
-					class="text-xl font-semibold flex gap-1 cards-classes-btn">
+					onClick={openDialog}>
 					<img src={icon} alt="logo check" />
 					{textLink}
 				</a>
@@ -53,38 +52,38 @@ export function CardClasses({
 
 			{isOpen && (
 				<dialog open>
-					<section class="rounded-2xl bg-black/60 shadow-2xl md:grid md:grid-cols-3 items-center max-w-[96%] xl:max-w-[60%] p-2">
+					<section className="rounded-2xl bg-black/60 shadow-2xl md:grid md:grid-cols-3 items-center max-w-[96%] xl:max-w-[60%] p-2">
 						<img
 							alt="Trainer"
 							src={bookImg}
-							class="h-32 w-full object-cover rounded-xl  md:h-full"
+							className="h-32 w-full object-cover rounded-xl  md:h-full"
 						/>
 
-						<div class="p-4 text-center sm:p-6 md:col-span-2 lg:p-8 text-white">
-							<p class="text-sm font-semibold uppercase tracking-widest text-white">
+						<div className="p-4 text-center sm:p-6 md:col-span-2 lg:p-8 text-white">
+							<p className="text-sm font-semibold uppercase tracking-widest text-white">
 								Run with the pack {title}
 							</p>
 
-							<h2 class="mt-6 font-black uppercase">
-								<span class="text-4xl font-black sm:text-5xl lg:text-6xl text-white">
+							<h2 className="mt-6 font-black uppercase">
+								<span className="text-4xl font-black sm:text-5xl lg:text-6xl text-white">
 									Get {amount} off
 								</span>
 
-								<span class="mt-2 block text-sm text-white">
+								<span className="mt-2 block text-sm text-white">
 									{describeOffer}
 								</span>
 							</h2>
 
 							<a
 								id="btn-card-classes"
-								class="mt-8 m-auto bg-white w-2/3 py-4 text-sm font-bold uppercase tracking-widest text-black rounded-2xl flex justify-center items-center gap-1 "
+								className="mt-8 m-auto bg-white w-2/3 py-4 text-sm font-bold uppercase tracking-widest text-black rounded-2xl flex justify-center items-center gap-1 "
 								target="_blank"
 								href="https://wa.me/+5491168641122">
 								Get {title} Discount
 								<img src={whatsapp.src} alt="whatsapp icon" />
 							</a>
 
-							<p class="mt-8 text-xs font-medium uppercase text-gray-400">
+							<p className="mt-8 text-xs font-medium uppercase text-gray-400">
 								Offer valid until 24th March, 2021 *
 							</p>
 						</div>

@@ -88,8 +88,8 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 										target="_blank"
 										href={link}
 										className="flex items-center justify-center gap-1  font-bold hover:text-white hover:underline underline-offset-4  absolute bottom-2 m-auto w-full decoration-dashed	">
-										Link to recommendation
 										<img src={world.src} alt="icon world" />
+										Link
 									</a>
 								</div>
 							</figure>

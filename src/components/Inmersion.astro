@@ -3,14 +3,14 @@ import { Image } from "astro:assets";
 import rotate from "../icons/rotate.svg";
 import { BlurVideo } from "./BlurVideo/BlurVideo";
 import preview from "../img/steve-english.jpg";
-import { Counter } from "../components/Counter/Counter";
+import { Counter } from "./Counter/Counter";
 ---
 
 <section
 	class="w-full h-full flex flex-col justify-center items-center relative"
-	id="video">
+	id="inmersion">
 	<aside class="my-20 text-center flex flex-col items-center justify-center">
-		<p class="font-semibold">VIDEO</p>
+		<p class="font-semibold">INMERSION</p>
 		<h2>
 			My Classes <br />
 			<strong> Live Education</strong>
@@ -148,6 +148,9 @@ import { Counter } from "../components/Counter/Counter";
 		line-height: 1.75;
 	}
 	@media (width < 1250px) {
+		article {
+			max-width: 96%;
+		}
 		h2 {
 			font-size: 1.75rem;
 		}

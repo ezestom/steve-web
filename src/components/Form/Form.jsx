@@ -19,10 +19,10 @@ export function Form() {
 
 	return (
 		<div className="relative form-container w-full md:w-1/2 z-10">
-			<article class="w-full flex justify-between flex-wrap gap-5">
-				<div class="max-w-[50ch] ">
+			<article className="w-full flex justify-between flex-wrap gap-5">
+				<div className="max-w-[50ch] ">
 					<span className="text-4xl font-bold">Contact</span>
-					<h5 class="text-xl md:text-2xl pt-2  text-pretty flex flex-col">
+					<h5 className="text-xl md:text-2xl pt-2  text-pretty flex flex-col">
 						If you have any questions, please contact me 📩
 					</h5>
 				</div>

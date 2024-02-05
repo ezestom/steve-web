@@ -48,8 +48,13 @@ export function HamburgerMenu() {
 							</a>
 						</li>
 						<li>
-							<a className="item" href="#video">
-								Video
+							<a className="item" href="#inmersion">
+								Inmersion
+							</a>
+						</li>
+						<li>
+							<a className="item" href="#faq">
+								Faq
 							</a>
 						</li>
 						<li>

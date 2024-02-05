@@ -47,7 +47,7 @@
 	transition: all 0.3s ease-in-out;
 }
 .card:hover > .stuff > figure > img {
-	transform: scale(1.5);
+	transform: scale(1.4);
 	transform-origin: bottom;
 }
 
@@ -147,5 +147,8 @@ figure > img {
 	.card2 > .stuff > figure > img {
 		height: 200px;
 		margin-top: 0;
+	}
+	.card:hover {
+		transform: rotate(0deg) scale(1);
 	}
 }
