@@ -1,12 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import profesor from "../img/avatar-profesor.avif";
+import logo from "../img/logo-steve.jpeg";
 ---
 
 <div class="">
 	<Image
-		src={profesor}
-		alt="profesor avatar"
-		class="rounded-full size-12 object-cover shadow-md border-2 border-slate-200"
+		src={logo}
+		alt="logo about steve"
+		class="rounded-full size-20 object-cover shadow-md border-2 border-slate-200 logo"
 	/>
 </div>
+
+<style>
+	.logo {
+		filter: drop-shadow(0 0 0.25rem #000000);
+	}
+</style>

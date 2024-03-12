@@ -38,14 +38,13 @@ export function CardClasses({
 	return (
 		<section>
 			<article className="cards-classes-article  ">
-				<h3 className="text-3xl font-semibold">{title}</h3>
-				<p className=" h-auto  w-full opacity-50 font-semibold  py-5 transition-all text-center text-balance  ">
+				<h3 className="text-3xl font-semibold text-balance">{title}</h3>
+				<p className=" h-auto  w-full opacity-50 font-semibold  py-5 transition-all text-center text-pretty text-xl ">
 					{description}
 				</p>
 				<a
 					className="btn-card-classes flex items-center justify-center gap-1 font-bold text-xl"
 					onClick={openDialog}>
-					<img src={icon} alt="logo check" />
 					{textLink}
 				</a>
 			</article>

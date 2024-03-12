@@ -16,54 +16,80 @@ import stars from "../icons/stars.svg";
 		<p class="font-semibold">CATEGORIES</p>
 		<h2>Online Classes <br /> <strong>For Remote Learning</strong></h2>
 	</div>
-	<aside class="md:w-[80%] sm:w-full h-full gap-1">
+	<aside class="md:w-[80%] sm:w-full h-full">
 		<div class="relative h-full flex">
-			<Image src={book} alt="book" class="absolute top-3 right-3 w-8" />
+			<Image src={book} alt="book" class="absolute top-1 right-1 w-10 bg-white rounded-full p-1 border "  />
 			<CardClasses
 				client:visible
-				title="Beginner"
-				description="Welcome to our Beginner English class! In this course, you'll dive into the basics of the language, from the alphabet to everyday phrases. You'll learn how to introduce yourself, talk about your family, and navigate daily situations. This course lays the foundation for your journey towards fluency."
+				title="A1 is the beginner level"
+				description="At this level, students should be able to understand and use basic phrases and sentences. They will be able to communicate in simple ways about familiar topics."
 				icon={check.src}
-				textLink="1 Class per week"
+				textLink=""
 				bookImg={bookImage.src}
 				amount="5%"
 				describeOffer="You will have one class per week, and you will also have a free class."
 			/>
 		</div>
 		<div class="relative h-full flex">
-			<Image src={book2} alt="book" class="absolute top-3 right-3 w-8" />
+			<Image src={book2} alt="book" class="absolute top-1 right-1 w-10 bg-white rounded-full p-1 border "  />
 			<CardClasses
 				client:visible
-				title="Intermediate"
-				description="In our Intermediate class, you'll delve deeper into grammar and expand your vocabulary. We'll focus on constructing more complex conversations, discussing current topics, and understanding common idiomatic expressions. Get ready to enhance your listening comprehension and communication skills in more challenging situations."
+				title="B1 is the elementary level"
+				description="At this level, students should be able to understand and use more complex phrases and sentences. The will be able to communicate in more detail about familiar topics."
 				icon={check.src}
-				textLink="2 Classes per week"
+				textLink=""
 				bookImg={bookImage.src}
 				amount="10%"
 				describeOffer="You will have two class per week, and you will also have a free class."
 			/>
 		</div>
 		<div class="relative h-full flex">
-			<Image src={star} alt="star" class="absolute top-3 right-3 w-8" />
+			<Image src={star} alt="star" class="absolute top-1 right-1 w-10 bg-white rounded-full p-1 border "  />
 			<CardClasses
 				client:visible
-				title="Professional"
-				description="The Professional English class is tailored for those aiming to master the language in a professional setting. You'll learn to compose business emails, participate in meetings, and deliver reports effectively. We'll also concentrate on industry-specific language, preparing you for success in the workplace."
+				title="B1 is the intermediate level"
+				description="At this level, students will be able to understand and use complex phrases and sentences. They will be able to communicate in detail about a variety of topics."
 				icon={check.src}
-				textLink="3 Classes per week"
+				textLink=""
 				bookImg={bookImage.src}
 				amount="15%"
 				describeOffer="You will have 3 class per week, and you will also have a free class."
 			/>
 		</div>
 		<div class="relative h-full flex">
-			<Image src={stars} alt="stars" class="absolute top-3 right-3 w-8" />
+			<Image src={stars} alt="stars" class="absolute top-1 right-1 w-10 bg-white rounded-full p-1 border "  />
 			<CardClasses
 				client:visible
-				title="Expert"
-				description="Congratulations, English expert! This class will challenge you with advanced readings, sophisticated debates, and in-depth analyses of literary texts. You'll refine your pronunciation, perfect your grammar, and explore the cultural richness of the English language. You're about to achieve a level of fluency that will open doors to limitless opportunities."
+				title="B2 is the upper intermediate level"
+				description="Students at this level can communicate fluently and spontaneously without much effort. They can aslso understand native sppeakers easily and produce clear and detailed writing on a variety of topics."
 				icon={check.src}
-				textLink="4 Classes per week"
+				textLink=""
+				bookImg={bookImage.src}
+				amount="20%"
+				describeOffer="You will have four class per week, and you will also have a free class."
+			/>
+		</div>
+		<div class="relative h-full flex">
+			<Image src={stars} alt="stars" class="absolute top-1 right-1 w-10 bg-white rounded-full p-1 border "  />
+			<CardClasses
+				client:visible
+				title="C1 is the advanced level"
+				description="Students at this level have complete control over the language and can use it for academic or professional purposes. They can also understand long and complicated texts with ease"
+				icon={check.src}
+				textLink=""
+				bookImg={bookImage.src}
+				amount="20%"
+				describeOffer="You will have four class per week, and you will also have a free class."
+			/>
+		</div>
+		<div class="relative h-full flex">
+			<Image src={stars} alt="stars" class="absolute top-1 right-1 w-10 bg-white rounded-full p-1 border "  />
+			<CardClasses
+				client:visible
+				title="Important Tip"
+				description="Grammar is an essential part of learning English. It is the foundation  for speaking and understanding. Learners need to know English grammar rules to use the language appropriately."
+				icon={check.src}
+				textLink=""
 				bookImg={bookImage.src}
 				amount="20%"
 				describeOffer="You will have four class per week, and you will also have a free class."
@@ -75,9 +101,8 @@ import stars from "../icons/stars.svg";
 <style>
 	aside {
 		display: grid;
-		place-items: center;
-		grid-template-columns: repeat(auto-fit, minmax(225px, 2fr));
-		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 2rem;
 		flex-wrap: wrap;
 	}
 
@@ -102,7 +127,7 @@ import stars from "../icons/stars.svg";
 		h2 {
 			font-size: 1.75rem;
 		}
-		p{
+		p {
 			font-size: 1rem;
 		}
 	}

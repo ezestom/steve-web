@@ -6,12 +6,13 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	transition: all 0.3s ease-in-out;
+	min-height: 275px;
 }
 .cards-classes-article:hover {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 10px #f07030;
 	cursor: crosshair;
 }
 .cards-classes-article:hover > p {
@@ -30,7 +31,10 @@
 	cursor: pointer;
 }
 @media (width < 1250px) {
-	.cards-classes-article p {
-		font-size: 1rem;
+	.cards-classes-article {
+		min-height: auto;
+		p {
+			font-size: 1rem;
+		}
 	}
 }

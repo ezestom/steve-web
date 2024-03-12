@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import professor from "../img/professor.jpg";
+import professor from "../img/learn.jpg";
 ---
 
 <section
@@ -14,7 +14,7 @@ import professor from "../img/professor.jpg";
 		</h2>
 	</aside>
 	<article class="flex items-center justify-around w-full">
-		<aside class="">
+		<aside class="w-1/2">
 			<div class="professor-container">
 				<Image
 					src={professor}
@@ -24,7 +24,7 @@ import professor from "../img/professor.jpg";
 			</div>
 		</aside>
 		<aside
-			class="flex flex-col items-center justify-center explain-container h-full">
+			class="flex flex-col items-center justify-center explain-container h-full w-1/2">
 			<div class="px-10">
 				<p
 					class="lg:text-5xl font-bold text-2xl text-center flex flex-col">
@@ -49,7 +49,6 @@ import professor from "../img/professor.jpg";
 <style>
 	.professor-container {
 		width: auto;
-		/* height: 100%; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -57,8 +56,8 @@ import professor from "../img/professor.jpg";
 	.image-professor {
 		object-fit: cover;
 		border-radius: 1rem;
-		outline: 0.5rem solid #ff7b22;
-		/* max-width: 500px; */
+		border: 0.5rem solid #ff7b22;
+		width: 100%;
 	}
 	strong {
 		background: linear-gradient(-45deg in oklch, #f07030, blue);

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./HamburgerMenu.css";
-import avatar from "../../img/avatar-profesor.avif";
+import avatar from "../../img/logo-steve.jpeg";
 
 export function HamburgerMenu() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,26 +12,26 @@ export function HamburgerMenu() {
 	return (
 		<>
 			<div
-				className="w-full top-0 absolute h-12 flex items-center bg-slate-100 border-b  "
+				className="w-full top-0 fixed h-20 flex items-center bg-slate-100 border-b z-10 "
 				id="header-mobile">
 				<img
-					className="size-10 m-2 object-cover rounded-full border-2 border-slate-200 shadow-md"
+					className="size-14 m-2 object-cover rounded-full border-2 border-slate-200 shadow-md"
 					src={avatar.src}
 					alt="avatar professor"
 				/>
-				<h1 class="font-bold flex flex-col items-start w-full m-auto">
+				<h1 class="font-bold flex flex-col items-start  w-full m-auto relative">
 					<strong class="text-md">I'm Steve</strong>
 					<span class="text-sm">Canadian English Professor</span>
+					<button
+						className="menu-btn"
+						onClick={toggleMenu}
+						popovertarget="menu">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
+							alt=""
+						/>
+					</button>
 				</h1>
-				<button
-					className="menu-btn"
-					onClick={toggleMenu}
-					popovertarget="menu">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
-						alt=""
-					/>
-				</button>
 			</div>
 
 			{isOpen && (
