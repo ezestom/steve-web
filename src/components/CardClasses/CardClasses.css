@@ -1,5 +1,5 @@
 .cards-classes-article {
-	background-color: #fafafa;
+	background: #fafafa;
 	border-radius: 1rem;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 1rem;
@@ -12,8 +12,13 @@
 	min-height: 275px;
 }
 .cards-classes-article:hover {
-	box-shadow: 0 0 10px #f07030;
 	cursor: crosshair;
+	background: linear-gradient(
+		0deg,
+		rgba(241, 113, 49, 0.1),
+		rgba(241, 113, 49, 0.5)
+	);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .cards-classes-article:hover > p {
 	opacity: 0.8;
