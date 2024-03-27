@@ -18,16 +18,14 @@
 	}
 	#demo {
 		width: 80%;
-		/* transform: translate(10%, 45%); */
 		font-weight: bold;
 		text-align: center;
 		max-height: 35vh;
 
 		/* --chars: 144; */
-		--chars: 330
+		--chars: 330;
 	}
 	article {
-		/* outline: 0.5rem dashed #f07030; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -42,12 +40,12 @@
 		line-height: 4rem;
 		background: 
       /* base color */ #eee /* highlight gradient */
-			linear-gradient(to right, #6300ff 0%, #e915c7 100%) 0 / 0 no-repeat;
-
-		-webkit-background-clip: text;
+			linear-gradient(to right, #f12711 0%, #f07030 100%) 0 / 0 no-repeat;	
+		background-clip: text;
 		color: transparent;
 		animation: text steps(var(--chars)) forwards;
 		animation-timeline: scroll(root);
+		text-wrap: balance;
 	}
 
 	@keyframes text {

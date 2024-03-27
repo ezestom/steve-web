@@ -3,18 +3,18 @@ import "./Faq.css";
 export function Faq() {
 	return (
 		<section
-			class="w-full h-full flex flex-col justify-center items-center relative section-faq"
+			className="w-full h-full flex flex-col justify-center items-center relative section-faq"
 			id="faq">
-			<aside class="my-20 text-center flex flex-col items-center justify-center ">
-				<p class="font-semibold">FAQ</p>
+			<aside className="my-20 text-center flex flex-col items-center justify-center ">
+				<p className="font-semibold">FAQ</p>
 				<h2>
 					Frequently asked <br />
 					<strong> Questions and Answers</strong>
 				</h2>
 			</aside>
-			<article class="max-w-[80%] w-full flex flex-col items-center justify-center article-container">
+			<article className="max-w-[80%] w-full flex flex-col items-center justify-center article-container">
 				<aside>
-					<details open name="accordion">
+					<details name="accordion" open>
 						<summary>
 							How do I schedule a private English lesson with you?
 						</summary>
@@ -27,7 +27,7 @@ export function Faq() {
 						</p>
 					</details>
 
-					<details open name="accordion">
+					<details name="accordion">
 						<summary>
 							What teaching materials do you use in your lessons?
 						</summary>
@@ -42,7 +42,7 @@ export function Faq() {
 						</p>
 					</details>
 
-					<details open name="accordion">
+					<details name="accordion">
 						<summary>
 							Do you offer group lessons or just one-on-one
 							tutoring?

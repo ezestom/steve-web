@@ -12,7 +12,7 @@ export function HamburgerMenu() {
 	return (
 		<>
 			<div
-				className="w-full top-0 fixed h-20 flex items-center bg-slate-100 border-b z-10 "
+				className="w-full top-0 fixed h-20 flex items-center bg-slate-100 border-b z-30 "
 				id="header-mobile">
 				<img
 					className="size-14 m-2 object-cover rounded-full border-2 border-slate-200 shadow-md"

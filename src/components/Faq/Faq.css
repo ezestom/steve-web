@@ -6,17 +6,17 @@
 	height: 80vh;
 	font-size: 1.25rem;
 }
-.section-faq  aside {
+.section-faq aside {
 	width: 65%;
 }
-.section-faq > aside  strong {
-	background: linear-gradient(-45deg in oklch, #f07030, blue);
+.section-faq > aside strong {
+	background: linear-gradient(90deg, #f12711, #ff7b22);
 	border-radius: 1rem;
 	padding: 0.5rem;
 	color: white;
 }
 
-.section-faq > aside  h2 {
+.section-faq > aside h2 {
 	font-size: 2.5rem;
 	font-weight: 700;
 	line-height: 1.75;
@@ -28,27 +28,29 @@ details {
 	margin: 0;
 	background-color: white;
 	opacity: 0.9;
+	p {
+		font-size: 1rem;
+	}
 
-	> summary {
+	summary {
 		background: #ccc;
 		padding: 0.5em;
 		border-bottom: 0.25em solid var(--border-color);
 		cursor: pointer;
 		font-weight: 500;
-
 		transition: background 0.25s ease, color 0.25s ease;
+	}
 
-		&:hover {
-			background: #b4b4b4;
-		}
+	summary:hover {
+		background: #b4b4b4;
 	}
 
 	&[open] {
 		border-bottom: 0.25em solid var(--border-color);
+	}
 
-		> summary {
-			background: #b4b4b4;
-		}
+	summary {
+		background: #b4b4b4;
 	}
 
 	> *:not(summary) {
@@ -78,17 +80,17 @@ details:not(details:has(+ details)) {
 }
 
 @media (width < 1250px) {
-	.section-faq{
+	.section-faq {
 		height: 100%;
 		width: 100%;
 	}
-	.section-faq  article {
+	.section-faq article {
 		max-width: 96%;
 	}
-	.section-faq > aside  h2 {
+	.section-faq > aside h2 {
 		font-size: 1.75rem;
 	}
-	.section-faq  aside {
+	.section-faq aside {
 		width: 100%;
 	}
 	summary {

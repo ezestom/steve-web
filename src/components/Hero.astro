@@ -25,7 +25,7 @@ import student2 from "../img/student2.jpg";
 			</div>
 		</article>
 		<article class="w-full h-full" id="img-container">
-			<div class="grid-list h-full w-full" id="images">
+			<div class="grid-list h-full w-full mt-10" id="images">
 				<Image class="image-student" src={student1} alt="hero image" />
 				<Image class="image-student" src={student2} alt="hero image" />
 			</div>
@@ -34,15 +34,14 @@ import student2 from "../img/student2.jpg";
 </section>
 
 <style>
-	@media (width < 1250px) {
-		#img-container {
-			display: none;
-		}
+	#img-container {
+		opacity: 30%;
 	}
+
 	.grid-list {
 		display: grid;
 		place-items: center;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 1rem;
 		background-image: url("../img/hero-shape-3.png");
 		background-repeat: no-repeat;
@@ -56,11 +55,11 @@ import student2 from "../img/student2.jpg";
 		margin: 1rem;
 	}
 	.important-text {
-		background: linear-gradient(-45deg in oklch, #f07030, blue);
+		color: white;
 		border-radius: 1rem;
 		padding: 0.5rem;
-		color: white;
 		line-height: 8rem;
+		background: linear-gradient(90deg, #f12711, #ff7b22);
 	}
 	.background {
 		background-color: #fafafa;
@@ -82,17 +81,17 @@ import student2 from "../img/student2.jpg";
 	/* Apple animation Midu */
 	#img-container {
 		z-index: -1;
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
-		animation:
+		/* animation:
 			scale-up both ease-in-out,
 			fade-away both linear;
 		animation-timeline: --scroll;
 		animation-range:
 			exit 0% exit 100%,
-			exit 50% exit 70%;
+			exit 50% exit 70%; */
 	}
 	.image-student:nth-child(1) {
 		transform: translate(-5em, 0);
@@ -101,10 +100,9 @@ import student2 from "../img/student2.jpg";
 		transform: translate(5rem, 0);
 	}
 
-	#text-container {
-		/* position: fixed; */
+	/* #text-container {
 		animation: fade-away both linear;
 		animation-timeline: --scroll;
 		animation-range: exit 20% exit 90%;
-	}
+	} */
 </style>

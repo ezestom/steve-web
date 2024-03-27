@@ -13,12 +13,9 @@
 }
 .cards-classes-article:hover {
 	cursor: crosshair;
-	background: linear-gradient(
-		0deg,
-		rgba(241, 113, 49, 0.1),
-		rgba(241, 113, 49, 0.5)
-	);
+	filter: drop-shadow(0 0 .1em #f07030);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	z-index: -1;
 }
 .cards-classes-article:hover > p {
 	opacity: 0.8;

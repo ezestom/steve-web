@@ -5,12 +5,22 @@ import twitter from "../icons/twitter.svg";
 import linkedin from "../icons/linkedin.svg";
 import youtube from "../icons/youtube.svg";
 import world from "../icons/world.svg";
-import OpenPeeps from "./OpenPeeps.astro";
+import { Image } from "astro:assets";
+import profe from "../img/open.png";
+import astro from "../img/favicon.svg";
 ---
 
-<section class="max-w-[80%] w-full min-h-56 m-auto flex-col flex relative" id="contact">
-	<OpenPeeps/>
-	<Form client:visible />
+<section
+	class="max-w-[80%] w-full min-h-56 m-auto flex-col flex relative"
+	id="contact">
+	<div class="flex justify-between w-full relative">
+		<Image
+			src={profe}
+			alt="profe"
+			class="absolute w-[400px] -bottom-5 right-0 -z-10 hidden md:block"
+		/>
+		<Form client:visible />
+	</div>
 	<div
 		class="w-full my-5 flex gap-1 lg:justify-between justify-center -z-1 items-center flex-wrap footer">
 		<a
@@ -31,67 +41,73 @@ import OpenPeeps from "./OpenPeeps.astro";
 		</a>
 		<p
 			class="flex items-center flex-col gap-1 opacity-60 text-center tracking-tighter">
-			<span class="flex items-center gap-1 flex-col">
-				<span>www.steve.com</span>
-				<span>All rights reserved.</span>
+			<span class="flex items-center justify-center gap-1 flex-col">
+				<span>@2024 - Argentina</span>
+				<span class="flex items-center"
+					>Developed with Astro
+					<a
+						class="hover:scale-110 transition"
+						target="_blank"
+						href="https://astro.build/"
+						><img
+							class="w-10 rotate-12"
+							src={astro.src}
+							alt="astro logo"
+						/></a
+					>
+				</span>
 			</span>
-			<div class="flex gap-3">
-				<a
-					target="_blank"
-					href="https://www.linkedin.com/in/ezequielstom/">
-					<img
-						class="opacity-60 hover:opacity-100 transition"
-						src={twitter.src}
-						alt="twitter icon"
-					/>
-				</a>
-				<a
-					target="_blank"
-					href="https://www.linkedin.com/in/ezequielstom/">
-					<img
-						class="opacity-60 hover:opacity-100 transition"
-						src={linkedin.src}
-						alt="twitter icon"
-					/>
-				</a>
-				<a
-					target="_blank"
-					href="https://www.youtube.com/@ezequielstom6745">
-					<img
-						class="opacity-60 hover:opacity-100 transition"
-						src={youtube.src}
-						alt="twitter icon"
-					/>
-				</a>
-			</div>
 		</p>
+		<div class="flex gap-3">
+			<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
+				<img
+					class="opacity-60 hover:opacity-100 transition"
+					src={twitter.src}
+					alt="twitter icon"
+				/>
+			</a>
+			<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
+				<img
+					class="opacity-60 hover:opacity-100 transition"
+					src={linkedin.src}
+					alt="twitter icon"
+				/>
+			</a>
+			<a target="_blank" href="https://www.youtube.com/@ezequielstom6745">
+				<img
+					class="opacity-60 hover:opacity-100 transition"
+					src={youtube.src}
+					alt="twitter icon"
+				/>
+			</a>
+		</div>
 	</div>
-
-	<style>
-		strong {
-			background: linear-gradient(-45deg in oklch, #f07030, blue);
-			border-radius: 1rem;
-			padding: 1rem;
-			color: white;
-		}
-		@media (width < 1200px) {
-			section {
-				max-width: 96%;
-				margin-bottom: 3rem;
-			}
-			.footer {
-				margin: 0.5rem 0;
-				gap: 1rem;
-			}
-		}
-
-		.footer {
-			background: #fafafa;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			border-bottom: 1px solid var(--border-line);
-			padding: 1rem 2rem;
-			border-radius: 1rem;
-			border-bottom: 1px solid var(--border-line);
-		}
-	</style>
 </section>
+
+<style>
+	strong {
+		background: linear-gradient(-45deg in oklch, #f07030, blue);
+		border-radius: 1rem;
+		padding: 1rem;
+		color: white;
+	}
+	@media (width < 1200px) {
+		section {
+			max-width: 96%;
+			margin-bottom: 3rem;
+		}
+		.footer {
+			margin: 0.5rem 0;
+			gap: 1rem;
+		}
+	}
+
+	.footer {
+		background: #fafafa;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		border-bottom: 1px solid var(--border-line);
+		padding: 1rem 2rem;
+		border-radius: 1rem;
+		border-bottom: 1px solid var(--border-line);
+	}
+</style>

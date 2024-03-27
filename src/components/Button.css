@@ -27,7 +27,7 @@ dialog {
 button,
 .selected-anchor {
 	padding: 1rem;
-	background: linear-gradient(-45deg in oklch, #f07030, blue);
+	background: linear-gradient(90deg, #f12711, #ff7b22);
 	color: white;
 	outline: 0.25rem solid transparent;
 	border-radius: 1rem;
@@ -36,8 +36,8 @@ button,
 }
 button:hover,
 .selected-anchor:hover {
-	background: linear-gradient(-90deg in oklch, #f07030, blue);
-	outline: 0.25rem dashed blue;
+	background: linear-gradient(-90deg, #f12711, #ff7b22);
+	outline: 0.25rem dashed #ff7b22;
 	cursor: pointer;
 }
 button:active,
