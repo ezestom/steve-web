@@ -1,12 +1,35 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../img/logo-steve.jpeg";
+import logo from "../img/logo-header.png";
 ---
 
 <div class="">
 	<Image
 		src={logo}
 		alt="logo about steve"
-		class="rounded-full size-20 object-cover shadow-md border-2 border-slate-200 z-10"
+		class="rounded-full fixed left-6 top-2 size-28 object-cover shadow-xl z-50"
 	/>
 </div>
+
+<style>
+	@media (width < 1250px) {
+		img {
+			display: none;
+		}
+	}
+	@media (width > 1250px) {
+		img {
+			animation: enhance-img linear both;
+			animation-timeline: scroll(root);
+			animation-range: 0 300px;
+		}
+		@keyframes enhance-img {
+			to {
+				transform: scale(1.2);
+				top: 1rem;
+				left: 4rem;
+				filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+			}
+		}
+	}
+</style>

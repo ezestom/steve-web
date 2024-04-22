@@ -50,7 +50,7 @@ export function BlurVideo({ urlYoutube, img }) {
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowFullScreen></iframe> */}
 					<video
-						className="m-auto w-[96%] lg:w-[50%] aspect-video rounded-lg shadow-2xl "
+						className="m-auto w-[96%] lg:w-[50%] aspect-video rounded-[1rem] shadow-2xl "
 						src={video}
 						autoPlay
 						controls

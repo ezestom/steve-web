@@ -3,11 +3,11 @@ import Avatar from "./Avatar.astro";
 import { Button } from "./Button.jsx";
 ---
 
+<Avatar />
 <section
-	class="flex justify-around items-center fixed top-2 header"
-	id="header">
+	class="flex justify-around items-center fixed top-4 header max-w-screen-xl"
+	id="nav">
 	<a href="/#top" class="flex gap-3 items-center">
-		<Avatar />
 		<h1 class="text-2xl font-bold flex flex-col items-center">
 			<strong class="text-2xl">I'm Steve</strong>
 			<span class="text-sm">Canadian English</span>
@@ -33,8 +33,8 @@ import { Button } from "./Button.jsx";
 </section>
 
 <style>
-	.header {
-		min-height: 6rem;
+	#nav {
+		min-height: 6.5rem;
 		z-index: 20;
 		margin: auto;
 		left: 0;
@@ -43,6 +43,7 @@ import { Button } from "./Button.jsx";
 		animation: enhance-header linear both;
 		animation-timeline: scroll(root);
 		animation-range: 0 300px;
+		position: relative;
 	}
 	.list-item {
 		border-bottom: 0.25rem dashed transparent;
@@ -54,8 +55,6 @@ import { Button } from "./Button.jsx";
 
 	@keyframes enhance-header {
 		to {
-			padding: 0 1rem;
-			justify-content: space-between;
 			position: fixed;
 			border-radius: 1rem;
 			outline: 0.5rem dashed #f07030;
@@ -64,7 +63,7 @@ import { Button } from "./Button.jsx";
 			backdrop-filter: saturate(100%) blur(5px);
 			background-color: rgba(255, 255, 255, 0.5);
 			z-index: 10;
-			width: 80%;
+			width: auto;
 		}
 	}
 	@media (width < 1250px) {

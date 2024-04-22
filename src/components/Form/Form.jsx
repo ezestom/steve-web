@@ -1,7 +1,7 @@
 import { useState } from "react";
 import x from "../../icons/x.svg";
 import "./Form.css";
-
+import whatsapp from "../../icons/whatsappColor.svg";
 export function Form() {
 	const [dialog, setDialog] = useState(false);
 
@@ -22,8 +22,14 @@ export function Form() {
 			<article className="w-full flex justify-between flex-wrap gap-5">
 				<div className="max-w-[50ch] ">
 					<span className="text-4xl font-bold">Contact</span>
-					<h5 className="text-xl md:text-2xl pt-2  text-pretty flex flex-col">
-						If you have any questions, please contact me 📩
+					<h5 className="text-xl md:text-2xl pt-2  ">
+						If you have any questions, <br /> please send me a text
+						message.{" "}
+						<img
+							src={whatsapp.src}
+							className="w-auto  opacity-10 absolute m-auto right-0 top-0 bottom-0"
+							alt="whatsapp logo"
+						/>
 					</h5>
 				</div>
 			</article>
@@ -31,9 +37,10 @@ export function Form() {
 			<h2 className="text-2xl font-semibold ">Ready to get started?</h2>
 
 			<div className=" flex justify-between w-full ">
-				<button
-					href="#open-dialog"
-					onClick={openDialog} // Usar la función openDialog aquí
+				<a
+					href="https://wa.me/5491161342789"
+					target="_blank"
+					rel="noreferrer"
 					id="open-dialog"
 					className="inline-flex items-center px-6 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 selected-anchor ">
 					Get in touch
@@ -49,7 +56,7 @@ export function Form() {
 							strokeWidth="2"
 							d="M1 5h12m0 0L9 1m4 4L9 9"></path>
 					</svg>
-				</button>
+				</a>
 			</div>
 
 			{dialog && ( // Mostrar el diálogo solo cuando dialog es true

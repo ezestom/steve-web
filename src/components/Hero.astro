@@ -1,31 +1,31 @@
 ---
 import { Image } from "astro:assets";
-import student1 from "../img/student1.jpg";
-import student2 from "../img/student2.jpg";
+import student1 from "../img/student_1.jpg";
+import student2 from "../img/student_2.jpg";
 ---
 
 <section
 	class="w-full h-[75vh] lg:h-screen flex justify-center items-center relative"
 	id="home">
-	<aside class="max-w-[96%] lg:max-w-[80%]">
+	<aside class="max-w-[96%] lg:max-w-[90%]">
 		<article class="w-full h-full flex items-center justify-center">
 			<div class="flex items-center flex-col gap-2" id="text-container">
 				<p
-					class="text-6xl lg:text-7xl font-bold sm:text-1xl text-center">
+					class="text-6xl lg:text-8xl font-bold sm:text-1xl text-center">
 					The Best
 				</p>
 				<h1
-					class="text-4xl lg:text-6xl font-bold sm:text-1xl text-center">
+					class="text-4xl lg:text-8xl font-bold sm:text-1xl text-center py-5">
 					<strong class="important-text">Remote Program</strong>
 				</h1>
 				<span
-					class="text-6xl lg:text-7xl font-bold sm:text-1xl text-center"
+					class="text-6xl lg:text-8xl font-bold sm:text-1xl text-center"
 					>for Students</span
 				>
 			</div>
 		</article>
 		<article class="w-full h-full" id="img-container">
-			<div class="grid-list h-full w-full mt-10" id="images">
+			<div class="grid-list h-full w-full mt-5" id="images">
 				<Image class="image-student" src={student1} alt="hero image" />
 				<Image class="image-student" src={student2} alt="hero image" />
 			</div>
@@ -35,14 +35,14 @@ import student2 from "../img/student2.jpg";
 
 <style>
 	#img-container {
-		opacity: 30%;
+		opacity: 20%;
 	}
 
 	.grid-list {
 		display: grid;
 		place-items: center;
 		grid-template-columns: repeat(1, 1fr);
-		grid-gap: 1rem;
+		grid-gap: 8rem;
 		background-image: url("../img/hero-shape-3.png");
 		background-repeat: no-repeat;
 		background-position: center;
@@ -53,6 +53,7 @@ import student2 from "../img/student2.jpg";
 		border-radius: 1rem;
 		outline: 0.5rem solid #ff7b22;
 		margin: 1rem;
+		max-width: 400px;
 	}
 	.important-text {
 		color: white;

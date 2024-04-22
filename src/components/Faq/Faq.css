@@ -4,10 +4,10 @@
 	justify-content: start;
 	align-items: center;
 	height: 80vh;
-	font-size: 1.25rem;
+	font-size: 1.75rem;
 }
 .section-faq aside {
-	width: 65%;
+	width: 75%;
 }
 .section-faq > aside strong {
 	background: linear-gradient(90deg, #f12711, #ff7b22);
@@ -19,7 +19,6 @@
 .section-faq > aside h2 {
 	font-size: 2.5rem;
 	font-weight: 700;
-	line-height: 1.75;
 }
 details {
 	--border-color: #f07030;
@@ -29,12 +28,12 @@ details {
 	background-color: white;
 	opacity: 0.9;
 	p {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	summary {
 		background: #ccc;
-		padding: 0.5em;
+		padding: 0.25em;
 		border-bottom: 0.25em solid var(--border-color);
 		cursor: pointer;
 		font-weight: 500;
@@ -54,7 +53,7 @@ details {
 	}
 
 	> *:not(summary) {
-		padding: 1em;
+		padding: .75rem;
 	}
 }
 

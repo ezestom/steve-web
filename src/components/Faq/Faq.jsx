@@ -19,11 +19,10 @@ export function Faq() {
 							How do I schedule a private English lesson with you?
 						</summary>
 						<p>
-							Scheduling a private English lesson is easy! You can
-							visit the "Schedule a Lesson" section on our
-							website, choose a convenient time slot from the
-							available options, and fill out the booking form.
-							I'll get back to you shortly to confirm the details.
+							Scheduling a private English lesson is easy! Just
+							send me a WhatsApp text message of the day and time
+							that is best for you and shortly I will confirm the
+							details with days and times available.
 						</p>
 					</details>
 
@@ -32,29 +31,13 @@ export function Faq() {
 							What teaching materials do you use in your lessons?
 						</summary>
 						<p>
-							I tailor my lessons to meet your individual needs
-							and goals. I utilize a variety of resources,
-							including textbooks, online materials, and
-							interactive exercises. Whether you're looking to
-							improve your conversation skills, grammar, or
-							vocabulary, the lessons will be customized to
-							enhance your overall proficiency in English.
-						</p>
-					</details>
-
-					<details name="accordion">
-						<summary>
-							Do you offer group lessons or just one-on-one
-							tutoring?
-						</summary>
-						<p>
-							While my primary focus is on one-on-one tutoring to
-							provide personalized attention, I also offer small
-							group lessons for those who prefer a collaborative
-							learning environment. Group lessons can be a great
-							option for friends, family members, or colleagues
-							who want to learn English together. Feel free to
-							inquire about group rates and availability!
+							All my classes are tailored to meet your needs and
+							are designed speciafically for you. Materials are
+							supplied by me along with interactive execises and
+							listening videos. Whether you're looking to improve
+							your conversation skills, grammar, or vocabulary,
+							the lessons will be customized to enhance you
+							overall proficiency in English.
 						</p>
 					</details>
 				</aside>
