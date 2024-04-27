@@ -18,46 +18,7 @@ export function Form() {
 	};
 
 	return (
-		<div className="relative form-container w-full md:w-1/2 z-10">
-			<article className="w-full flex justify-between flex-wrap gap-5">
-				<div className="max-w-[50ch] ">
-					<span className="text-4xl font-bold">Contact</span>
-					<h5 className="text-xl md:text-2xl pt-2  ">
-						If you have any questions, <br /> please send me a text
-						message.{" "}
-						<img
-							src={whatsapp.src}
-							className="w-auto  opacity-10 absolute m-auto right-0 top-0 bottom-0"
-							alt="whatsapp logo"
-						/>
-					</h5>
-				</div>
-			</article>
-			<hr />
-			<h2 className="text-2xl font-semibold ">Ready to get started?</h2>
-
-			<div className=" flex justify-between w-full ">
-				<a
-					href="https://wa.me/5491161342789"
-					target="_blank"
-					rel="noreferrer"
-					id="open-dialog"
-					className="inline-flex items-center px-6 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 selected-anchor ">
-					Get in touch
-					<svg
-						className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-						aria-hidden="true"
-						fill="none"
-						viewBox="0 0 14 10">
-						<path
-							stroke="currentColor"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-					</svg>
-				</a>
-			</div>
+		
 
 			{dialog && ( // Mostrar el diálogo solo cuando dialog es true
 				<dialog open className="">

@@ -1,27 +1,53 @@
 ---
-import { Form } from "./Form/Form";
-
-import twitter from "../icons/twitter.svg";
-import linkedin from "../icons/linkedin.svg";
-import youtube from "../icons/youtube.svg";
 import world from "../icons/world.svg";
-import { Image } from "astro:assets";
-import profe from "../img/open.png";
 import astro from "../img/favicon.svg";
+import whatsappColor from "../icons/whatsappColor.svg";
+import maps from "../icons/maps.png";
 ---
 
-<section
-	class="max-w-[80%] w-full min-h-56 m-auto flex-col flex relative"
-	id="contact">
-	<div class="flex justify-between w-full relative">
-		<Image
-			src={profe}
-			alt="profe"
-			class="absolute w-[400px] -bottom-5 right-0 -z-10 hidden md:block"
-		/>
-		<Form client:visible />
-	</div>
-	<div
+<section class="max-w-[80%] w-full min-h-56 m-auto relative" id="contact">
+	<aside class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-wrap py-6">
+		<a
+			class="relative whatsapp-container z-10"
+			href="https://wa.me/5491161342789"
+			target="_blank"
+			rel="noreferrer">
+			<div class="">
+				<span class="text-3xl font-bold">Contact</span>
+				<h5 class="text-xl md:text-2xl pt-2">
+					How to contact me?{" "}
+				</h5>
+				<h2 class="text-2xl font-semibold">
+					Send a text message only to: <span>+54 9 11-6134-2789</span>
+				</h2>
+			</div>
+			<img
+				src={whatsappColor.src}
+				class="transition opacity-20 max-w-[150px] absolute right-0 my-auto top-0 bottom-0 -z-1"
+				alt="whatsapp image"
+			/>
+		</a>
+
+		<a
+			class="relative maps-container z-10"
+			href="https://www.google.com/maps/place/English+with+Steve/@-34.4409476,-58.7366843,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb9ef21be4f5b:0x155cd7a0b0ab4b92!8m2!3d-34.4409521!4d-58.7341094!16s%2Fg%2F11r75w3xyg?hl=es-419&entry=ttu"
+			target="_blank"
+			rel="noreferrer">
+			<div class="">
+				<span class="text-3xl font-bold">Class hours</span>
+				<h5 class="text-xl md:text-2xl pt-2">
+					and more reviews{" "}
+				</h5>
+				<h2 class="text-2xl font-semibold">on Google Maps</h2>
+			</div>
+			<img
+				src={maps.src}
+				class="transition opacity-20 max-w-[150px] absolute right-0 my-auto top-0 bottom-0 -z-1 pr-2"
+				alt="whatsapp image"
+			/>
+		</a>
+	</aside>
+	<footer
 		class="w-full my-5 flex gap-1 lg:justify-between justify-center -z-1 items-center flex-wrap footer">
 		<a
 			target="_blank"
@@ -58,33 +84,34 @@ import astro from "../img/favicon.svg";
 				</span>
 			</span>
 		</p>
-		<!-- <div class="flex gap-3">
-			<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
-				<img
-					class="opacity-60 hover:opacity-100 transition"
-					src={twitter.src}
-					alt="twitter icon"
-				/>
-			</a>
-			<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
-				<img
-					class="opacity-60 hover:opacity-100 transition"
-					src={linkedin.src}
-					alt="twitter icon"
-				/>
-			</a>
-			<a target="_blank" href="https://www.youtube.com/@ezequielstom6745">
-				<img
-					class="opacity-60 hover:opacity-100 transition"
-					src={youtube.src}
-					alt="twitter icon"
-				/>
-			</a>
-		</div> -->
-	</div>
+	</footer>
 </section>
 
 <style>
+	.whatsapp-container,
+	.maps-container {
+		display: flex;
+		align-items: stretch;
+		gap: 1rem;
+		justify-items: center;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		background-color: #fafafa;
+		flex-wrap: wrap;
+		outline: transparent dashed 0.5rem;
+		position: relative;
+		transition: all 0.5s;
+
+		/* z-index: 40; */
+	}
+	.whatsapp-container:hover {
+		outline: #25d366 dashed 0.5rem;
+	}
+	.maps-container:hover {
+		outline: #db4437 dashed 0.5rem;
+	}
+
 	strong {
 		background: linear-gradient(-45deg in oklch, #f07030, blue);
 		border-radius: 1rem;

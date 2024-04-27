@@ -4,9 +4,7 @@ import { Button } from "./Button.jsx";
 ---
 
 <Avatar />
-<section
-	class="flex justify-around items-center fixed top-4 header max-w-screen-xl"
-	id="nav">
+<section class="flex justify-center items-center fixed top-4 header" id="nav">
 	<a href="/#top" class="flex gap-3 items-center">
 		<h1 class="text-2xl font-bold flex flex-col items-center">
 			<strong class="text-2xl">I'm Steve</strong>
@@ -15,8 +13,8 @@ import { Button } from "./Button.jsx";
 		</h1>
 	</a>
 
-	<nav class="">
-		<ul class="flex justify-center gap-10 text-xl font-extrabold">
+	<nav class="px-4">
+		<ul class="flex justify-center gap-10 text-xl font-bold">
 			<li><a class="list-item" href="#classes">Classes</a></li>
 			<li>
 				<a class="list-item" href="#experience">Experience</a>
@@ -42,11 +40,14 @@ import { Button } from "./Button.jsx";
 		/* header scroll animation  with css  */
 		animation: enhance-header linear both;
 		animation-timeline: scroll(root);
-		animation-range: 0 300px;
+		animation-range: 0 100px;
 		position: relative;
+		width: fit-content;
+		padding: 0 1rem;
 	}
 	.list-item {
 		border-bottom: 0.25rem dashed transparent;
+		margin: 0 .25rem;
 	}
 	.list-item:hover {
 		color: #f07030;
@@ -63,10 +64,9 @@ import { Button } from "./Button.jsx";
 			backdrop-filter: saturate(100%) blur(5px);
 			background-color: rgba(255, 255, 255, 0.5);
 			z-index: 10;
-			width: auto;
 		}
 	}
-	@media (width < 1250px) {
+	@media (width < 1300px) {
 		.header {
 			display: none;
 		}
