@@ -8,12 +8,12 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	min-height: 275px;
 }
 .cards-classes-article:hover {
 	cursor: crosshair;
-	filter: drop-shadow(0 0 .1em #f07030);
+	transform: scale(1.05);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	z-index: -1;
 }
