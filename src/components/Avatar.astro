@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 import logo from "../img/logo-header.png";
 ---
 
-<div class="">
+<a href="#top" class="">
 	<Image
 		src={logo}
 		alt="logo about steve"
 		class="rounded-full fixed left-6 top-2 size-28 object-cover shadow-xl z-50"
 	/>
-</div>
+</a>
 
 <style>
 	@media (width < 1300px) {
@@ -27,7 +27,7 @@ import logo from "../img/logo-header.png";
 			to {
 				transform: scale(1.2);
 				top: 1rem;
-				left: 4rem;
+				left: 1.5rem;
 				filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 			}
 		}

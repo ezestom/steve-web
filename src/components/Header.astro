@@ -5,15 +5,9 @@ import { Button } from "./Button.jsx";
 
 <Avatar />
 <section class="flex justify-center items-center fixed top-4 header" id="nav">
-	<a href="/#top" class="flex gap-3 items-center">
-		<h1 class="font-bold flex flex-col items-center">
-			<strong class="text-xl">I'm Steve</strong>
-			<span class="text-sm">Canadian English</span>
-			<span class="text-sm">Professor</span>
-		</h1>
-	</a>
 
-	<nav class="px-4">
+
+	<nav class="px-8">
 		<ul class="flex justify-center gap-10 text-xl font-bold">
 			<li><a class="list-item" href="#classes">Classes</a></li>
 			<li>
@@ -40,14 +34,13 @@ import { Button } from "./Button.jsx";
 		/* header scroll animation  with css  */
 		animation: enhance-header linear both;
 		animation-timeline: scroll(root);
-		animation-range: 0 100px;
+		animation-range: 0 150px;
 		position: relative;
 		width: fit-content;
 		padding: 0 1rem;
 	}
 	.list-item {
-		border-bottom: 0.25rem dashed transparent;
-		margin: 0 0.25rem;
+		border-bottom: 0.25rem dashed transparent;		
 	}
 	.list-item:hover {
 		color: #f07030;
@@ -60,7 +53,7 @@ import { Button } from "./Button.jsx";
 			border-radius: 1rem;
 			outline: 0.5rem dashed #f07030;
 			top: 1rem;
-			height: 6rem;
+			height: 5rem;
 			backdrop-filter: saturate(100%) blur(5px);
 			background-color: rgba(255, 255, 255, 0.5);
 			z-index: 10;

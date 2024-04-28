@@ -5,7 +5,7 @@ import student2 from "../img/student_2.jpg";
 ---
 
 <section
-	class="w-full h-[75vh] lg:h-screen flex justify-center items-center relative"
+	class="w-full h-[90vh] flex justify-center items-center relative"
 	id="home">
 	<aside class="max-w-[96%] lg:max-w-[90%]">
 		<article class="w-full h-full flex items-center justify-center">
@@ -25,7 +25,7 @@ import student2 from "../img/student_2.jpg";
 			</div>
 		</article>
 		<article class="w-full h-full" id="img-container">
-			<div class="grid-list h-full w-full mt-5" id="images">
+			<div class="grid-list h-full w-full" id="images">
 				<Image class="image-student" src={student1} alt="hero image" />
 				<Image class="image-student" src={student2} alt="hero image" />
 			</div>
@@ -34,20 +34,15 @@ import student2 from "../img/student_2.jpg";
 </section>
 
 <style>
-	#img-container {
-		opacity: 20%;
-	}
-
 	.grid-list {
 		display: grid;
 		place-items: center;
+		gap: 2rem;
 		grid-template-columns: repeat(1, 1fr);
-		grid-gap: 8rem;
 		background-image: url("../img/hero-shape-3.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
-		overflow-x: hidden;
 	}
 	.image-student {
 		object-fit: cover;
@@ -55,6 +50,8 @@ import student2 from "../img/student_2.jpg";
 		outline: 0.5rem solid #ff7b22;
 		margin: 1rem;
 		max-width: 400px;
+		background-color: white;
+		opacity: 45%;
 	}
 	.important-text {
 		color: white;
@@ -86,7 +83,6 @@ import student2 from "../img/student_2.jpg";
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
 		/* animation:
 			scale-up both ease-in-out,
 			fade-away both linear;
@@ -96,10 +92,10 @@ import student2 from "../img/student_2.jpg";
 			exit 50% exit 70%; */
 	}
 	.image-student:nth-child(1) {
-		transform: translate(-5em, 0);
+		transform: translate(-75%, 0);
 	}
 	.image-student:nth-child(2) {
-		transform: translate(5rem, 0);
+		transform: translate(75%, 0);
 	}
 
 	/* #text-container {
@@ -107,4 +103,18 @@ import student2 from "../img/student_2.jpg";
 		animation-timeline: --scroll;
 		animation-range: exit 20% exit 90%;
 	} */
+	@media (width < 1000px) {
+		.grid-list {
+			overflow-x: hidden;
+		}
+		.image-student {
+			max-width: 250px;
+		}
+		.image-student:nth-child(1) {
+			transform: translate(-0%, 0);
+		}
+		.image-student:nth-child(2) {
+			transform: translate(0%, 0);
+		}
+	}
 </style>
