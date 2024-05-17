@@ -2,61 +2,53 @@
 import { Image } from "astro:assets";
 import student1 from "../img/student_1.jpg";
 import student2 from "../img/student_2.jpg";
+import Slider from "./Slider.astro";
 ---
 
 <section
-	class="w-full h-[100vh] flex justify-center items-center relative"
+	class="w-full  h-[100vh] flex justify-center items-center relative"
 	id="home">
 	<aside class="max-w-[96%] lg:max-w-[90%]">
 		<article class="w-full h-full flex items-center justify-center">
-			<div class="flex items-center flex-col gap-2" id="text-container">
+			<div class="flex items-center justify-center flex-col gap-2" id="text-container">
 				<p
-					class="text-7xl font-black lg:text-8xl sm:text-1xl text-center">
+					class="text-6xl md:text-7xl font-black lg:text-7xl sm:text-1xl text-center">
 					The Best
 				</p>
 				<h1
-					class="text-4xl lg:text-8xl font-bold sm:text-1xl text-center py-5">
+					class="text-4xl lg:text-7xl font-bold sm:text-1xl text-center md:py-5">
 					<strong class="important-text">Online Program</strong>
 				</h1>
 				<span
-					class="text-6xl lg:text-8xl font-bold sm:text-1xl text-center"
+					class="text-6xl lg:text-7xl font-bold sm:text-1xl text-center"
 					>for Students</span
 				>
 			</div>
 		</article>
-		<article class="w-full h-full relative" id="img-container">
-			<div class="grid-list" id="images">
-				<Image class="image-student" src={student1} alt="hero image" />
+		<article
+			class="w-full h-full absolute overflow-hidden"
+			id="img-container">
+			<div
+				class="h-full hidden md:flex items-end xl:items-center justify-center"
+				id="images">
+				<Image
+					class="image-student "
+					src={student1}
+					alt="hero image"
+				/>
 				<Image class="image-student" src={student2} alt="hero image" />
 			</div>
 		</article>
 	</aside>
+	<Slider text="English with Steve" />
 </section>
 
 <style>
-	.grid-list {
-		padding-top: 5rem;
-		display: grid;
-		place-items: center;
-		grid-template-columns: repeat(1, fr);
-		background-image: url("../img/hero-shape-3.png");
-		background-repeat: no-repeat;
-		background-position: center right;
-		background-size: contain;
-		margin: auto;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
-	}
 	.image-student {
 		object-fit: cover;
+		max-width: 400px;
 		border-radius: 1rem;
 		outline: 0.5rem solid #ff7b22;
-		max-width: 500px;
-		background-color: white;
 		opacity: 45%;
 	}
 	.important-text {
