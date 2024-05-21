@@ -6,11 +6,13 @@ import Slider from "./Slider.astro";
 ---
 
 <section
-	class="w-full  h-[100vh] flex justify-center items-center relative"
+	class="w-full h-[100vh] flex justify-center items-center relative"
 	id="home">
 	<aside class="max-w-[96%] lg:max-w-[90%]">
-		<article class="w-full h-full flex items-center justify-center">
-			<div class="flex items-center justify-center flex-col gap-2" id="text-container">
+		<article class="w-full h-full flex items-center justify-center -translate-y-10 md:-translate-y-0">
+			<div
+				class="flex items-center justify-center flex-col md:gap-2"
+				id="text-container">
 				<p
 					class="text-6xl md:text-7xl font-black lg:text-7xl sm:text-1xl text-center">
 					The Best
@@ -29,14 +31,18 @@ import Slider from "./Slider.astro";
 			class="w-full h-full absolute overflow-hidden"
 			id="img-container">
 			<div
-				class="h-full hidden md:flex items-end xl:items-center justify-center"
+				class="h-full flex items-end xl:items-center justify-center"
 				id="images">
 				<Image
-					class="image-student "
+					class="image-student outline-8 outline-orange-500 md:rounded-xl"
 					src={student1}
 					alt="hero image"
 				/>
-				<Image class="image-student" src={student2} alt="hero image" />
+				<Image
+					class="image-student outline-8 outline-orange-500 md:rounded-xl"
+					src={student2}
+					alt="hero image"
+				/>
 			</div>
 		</article>
 	</aside>
@@ -46,10 +52,9 @@ import Slider from "./Slider.astro";
 <style>
 	.image-student {
 		object-fit: cover;
+		width: 100%;
 		max-width: 400px;
-		border-radius: 1rem;
-		outline: 0.5rem solid #ff7b22;
-		opacity: 45%;
+		opacity: 50%;
 	}
 	.important-text {
 		color: white;
@@ -102,9 +107,6 @@ import Slider from "./Slider.astro";
 		animation-range: exit 20% exit 90%;
 	} */
 	@media (width < 1000px) {
-		.grid-list {
-			overflow-x: hidden;
-		}
 		.image-student {
 			max-width: 250px;
 		}
