@@ -35,12 +35,12 @@ import Slider from "./Slider.astro";
 				class="h-full flex items-end xl:items-center justify-center"
 				id="images">
 				<Image
-					class="image-student outline-8 outline-orange-500 md:rounded-xl"
+					class="image-student md:rounded-xl"
 					src={student1}
 					alt="hero image"
 				/>
 				<Image
-					class="image-student outline-8 outline-orange-500 md:rounded-xl"
+					class="image-student md:rounded-xl"
 					src={student2}
 					alt="hero image"
 				/>
@@ -55,7 +55,12 @@ import Slider from "./Slider.astro";
 		object-fit: cover;
 		width: 100%;
 		max-width: 500px;
-		opacity: 50%;
+		background: linear-gradient(90deg, #f12711, #ff7b22);
+		animation: scale-up both ease-in-out;
+		animation-timeline: --scroll;
+		animation-range: exit 10% exit 100%;
+
+		opacity: .75;
 	}
 	.important-text {
 		color: white;
@@ -70,6 +75,7 @@ import Slider from "./Slider.astro";
 	@keyframes scale-up {
 		to {
 			scale: 1.5;
+			opacity: 1;
 		}
 	}
 	@keyframes fade-away {
@@ -96,10 +102,10 @@ import Slider from "./Slider.astro";
 			exit 50% exit 70%; */
 	}
 	.image-student:nth-child(1) {
-		transform: translate(-75%, 0);
+		transform: translate(-65%, 0) scale(1.5) rotate(10deg);
 	}
 	.image-student:nth-child(2) {
-		transform: translate(75%, 0);
+		transform: translate(65%, 0) scale(1.5) rotate(-10deg);
 	}
 
 	/* #text-container {

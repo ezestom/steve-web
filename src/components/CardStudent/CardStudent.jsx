@@ -67,7 +67,7 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 									alt={studentImg}
 									// className="mt-10"
 								/>
-								<div className="info-card2-container">
+								<div className="info-card2-container  flex flex-col justify-center items-center">
 									<h4 className="flex  items-center justify-center gap-1 pt-1 userName">
 										<img src={user.src} alt="user-icon" />
 										{name}
@@ -81,13 +81,13 @@ export function CardStudent({ studentImg, text, name, date, link }) {
 									</span>
 									<p
 										id="description2"
-										className=" text-white font-semibold text-md md:text-xl py-1 text-balance ">
+										className=" text-white font-semibold text-md md:text-xl py-2 text-pretty max-w-[75ch] ">
 										{text}
 									</p>
 									<a
 										target="_blank"
 										href={link}
-										className="flex items-center justify-center gap-1  font-bold hover:text-white hover:underline underline-offset-4  absolute bottom-2 m-auto w-full decoration-dashed	">
+										className="flex items-center justify-center gap-1 mx-auto font-bold hover:text-white hover:underline underline-offset-4  absolute bottom-2 m-auto  decoration-dashed	">
 										<img src={world.src} alt="icon world" />
 										Link
 									</a>

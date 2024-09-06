@@ -1,0 +1,149 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { words } from "../3000.js";
+import search from "../icons/search.webp";
+import arrow from "../icons/arrow.svg";
+import arrow2 from "../icons/arrow2.svg";
+
+// Mapear el objeto para obtener un array con las palabras en inglés y español
+const mappedWords = Object.entries(words);
+---
+
+<Layout title="Most 3000 Common Words in English & Spanish">
+	<div
+		class="relative overflow-x-auto shadow-md sm:rounded-lg flex flex-col items-center justify-center">
+		<article class="xl:flex items-center justify-center h-full hidden z-10">
+			<div
+				class="flex items-center justify-center flex-col fixed bottom-0 top-0 left-[15%]"
+				id="text-container">
+				<p
+					class="text-6xl md:text-5xl font-black lg:text-6xl sm:text-1xl text-center">
+					Most <br /> Common
+				</p>
+				<h1
+					class="text-4xl lg:text-8xl font-black sm:text-1xl text-center md:py-5 mt-1 rounded-3xl overflow-hidden">
+					<strong class="important-text">3000</strong>
+				</h1>
+				<span
+					class="absolute whitespace-nowrap -translate-y-16 -rotate-12 text-4xl lg:text-8xl font-black sm:text-1xl text-center">
+					Words <code
+						class="text-4xl lg:text-8xl font-black sm:text-1xl text-center bg-gradient-to-r from-[#f12711] to-[#ff7b22] text-transparent bg-clip-text"
+						>in</code
+					>
+				</span>
+				<span
+					class="flex -translate-y-32 items-center pt-40 text-6xl md:text-5xl font-black flex-col lg:text-6xl sm:text-1xl text-center">
+					<span
+						class="bg-gradient-to-r from-[#f12711] to-[#ff7b22] text-transparent bg-clip-text h-[70px]"
+						>English</span
+					>
+					<img src={arrow.src} class="w-[100px] rotate-45" alt="" /> Spanish
+				</span>
+				<button
+					onclick="window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+					});"
+					class="fixed -bottom-5 flex items-center flex-col group important-text rounded-t-3xl hover:-translate-y-2 hover:scale-105 transition h-[100px] active:scale-100 active:translate-y-0">
+					<img
+						src={arrow2.src}
+						alt="arrow go top image"
+						class="-rotate-45 w-[35px] group-hover:scale-110 transition-all duration-250"
+					/>
+					<span> Go to top </span>
+				</button>
+			</div>
+			<div
+				class="flex items-center justify-center flex-col fixed bottom-0 top-0 right-[05%] z-20">
+				<img src={search.src} class="w-[550px] -rotate-12" alt="" />
+
+				<p
+					id="hovered-word"
+					class="text-3xl absolute transition delay-75">
+					&nbsp;
+				</p>
+			</div>
+		</article>
+
+		<table
+			id="words-table"
+			class="w-full max-w-[400px] text-sm mt-20 text-center text-gray-400 z-0">
+			<thead class="important-text fixed w-full max-w-[400px] top-0">
+				<tr
+					class="flex items-center jutify-center w-full py-2 text-3xl">
+					<th scope="col" class="w-full">English</th>
+					<th scope="col" class="w-full">Español</th>
+				</tr>
+			</thead>
+			<tbody>
+				{
+					mappedWords.map(([english, spanish], index) => (
+						<tr
+							class="group border-b border-gray-700  hover:bg-gray-600  bg-gray-900 font-semibold hover:cursor-crosshair"
+							data-english={english}
+							data-spanish={spanish}>
+							<td class=" py-2  text-gray-300">{english}</td>
+							<td class=" py-2  text-gray-300">{spanish}</td>
+						</tr>
+					))
+				}
+			</tbody>
+		</table>
+	</div>
+</Layout>
+
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+		const hoveredWordElement = document.getElementById("hovered-word");
+
+		const englishWordElement = document.createElement("span");
+		const spanishWordElement = document.createElement("span");
+
+		// Estilos en línea
+		englishWordElement.style.fontSize = "2rem";
+		englishWordElement.style.fontWeight = "900";
+		englishWordElement.style.position = "absolute";
+		englishWordElement.style.top = "1rem";
+		englishWordElement.style.left = "-10rem";
+
+		spanishWordElement.style.fontSize = "2rem";
+		spanishWordElement.style.fontWeight = "900";
+		spanishWordElement.style.position = "absolute";
+		spanishWordElement.style.top = "-7rem";
+		spanishWordElement.style.left = "-2rem";
+		spanishWordElement.style.color = "#ff7b22";
+
+		hoveredWordElement.appendChild(englishWordElement);
+		hoveredWordElement.appendChild(spanishWordElement);
+
+		const rows = document.querySelectorAll("#words-table tbody tr");
+
+		rows.forEach((row) => {
+			row.addEventListener("mouseenter", (event) => {
+				const english =
+					event.currentTarget.getAttribute("data-english");
+				const spanish =
+					event.currentTarget.getAttribute("data-spanish");
+
+				englishWordElement.textContent = `${english}`;
+				spanishWordElement.textContent = `${spanish}`;
+			});
+
+			row.addEventListener("mouseleave", () => {
+				englishWordElement.textContent = "";
+				spanishWordElement.textContent = "";
+			});
+		});
+	});
+</script>
+
+<style>
+	div {
+		line-height: none !important;
+	}
+	.important-text {
+		color: white;
+		padding: 1rem;
+		background: linear-gradient(90deg, #f12711, #ff7b22);
+	}
+</style>

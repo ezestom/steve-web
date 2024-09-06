@@ -1,8 +1,7 @@
 ---
 import world from "../icons/world.svg";
-import astro from "../img/favicon.svg";
 import whatsappColor from "../icons/whatsappColor.svg";
-import maps from "../icons/maps.png";
+import maps from "../icons/maps.webp";
 ---
 
 <section class="max-w-[80%] w-full min-h-56 m-auto relative" id="contact">
@@ -52,7 +51,7 @@ import maps from "../icons/maps.png";
 		<a
 			target="_blank"
 			href="https://ezestom.github.io/portfolio/"
-			class="opacity-60 hover:opacity-100 transition">
+			class="opacity-60 hover:opacity-100 transition text-sm">
 			<div class="flex flex-col items-center tracking-tighter">
 				<span>Created & Designed by</span>
 
@@ -66,75 +65,68 @@ import maps from "../icons/maps.png";
 			</div>
 		</a>
 		<p
-			class="flex items-center flex-col gap-1 opacity-60 text-center tracking-tighter">
+			class="flex items-center justify-center flex-col gap-1 opacity-60 text-center tracking-tighter text-sm">
 			<span class="flex items-center justify-center gap-1 flex-col">
 				<span>@2024 - Argentina</span>
-				<span class="flex items-center"
-					>Developed with Astro
-					<a
-						class="hover:scale-110 transition"
-						target="_blank"
-						href="https://astro.build/"
-						><img
-							class="w-10 rotate-12"
-							src={astro.src}
-							alt="astro logo"
-						/></a
-					>
-				</span>
+				<a
+					class="hover:scale-105 transition"
+					target="_blank"
+					href="https://astro.build/">
+					<span>Developed with Astro </span>
+				</a>
 			</span>
 		</p>
 	</footer>
-</section>
 
-<style>
-	.whatsapp-container,
-	.maps-container {
-		display: flex;
-		align-items: stretch;
-		gap: 1rem;
-		justify-items: center;
-		padding: 2rem;
-		border-radius: 1rem;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		background-color: #fafafa;
-		flex-wrap: wrap;
-		outline: transparent dashed 0.5rem;
-		position: relative;
-		transition: all 0.5s;
-
-		/* z-index: 40; */
-	}
-	.whatsapp-container:hover {
-		outline: #25d366 dashed 0.5rem;
-	}
-	.maps-container:hover {
-		outline: #db4437 dashed 0.5rem;
-	}
-
-	strong {
-		background: linear-gradient(-45deg in oklch, #f07030, blue);
-		border-radius: 1rem;
-		padding: 1rem;
-		color: white;
-	}
-	@media (width < 1200px) {
-		section {
-			max-width: 96%;
-			margin-bottom: 3rem;
-		}
-		.footer {
-			margin: 0.5rem 0;
+	<style>
+		.whatsapp-container,
+		.maps-container {
+			display: flex;
+			align-items: stretch;
 			gap: 1rem;
-		}
-	}
+			justify-items: center;
+			padding: 2rem;
+			border-radius: 1rem;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			background-color: #fafafa;
+			flex-wrap: wrap;
+			outline: transparent dashed 0.5rem;
+			position: relative;
+			transition: all 0.5s;
 
-	.footer {
-		background: #fafafa;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		border-bottom: 1px solid var(--border-line);
-		padding: 1rem 2rem;
-		border-radius: 1rem;
-		border-bottom: 1px solid var(--border-line);
-	}
-</style>
+			/* z-index: 40; */
+		}
+		.whatsapp-container:hover {
+			outline: #25d366 dashed 0.5rem;
+		}
+		.maps-container:hover {
+			outline: #db4437 dashed 0.5rem;
+		}
+
+		strong {
+			background: linear-gradient(-45deg in oklch, #f07030, blue);
+			border-radius: 1rem;
+			padding: 1rem;
+			color: white;
+		}
+		@media (width < 1200px) {
+			section {
+				max-width: 96%;
+				margin-bottom: 3rem;
+			}
+			.footer {
+				margin: 0.5rem 0;
+				gap: 1rem;
+			}
+		}
+
+		.footer {
+			background: #fafafa;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			border-bottom: 1px solid var(--border-line);
+			padding: 1rem 2rem;
+			border-radius: 1rem;
+			border-bottom: 1px solid var(--border-line);
+		}
+	</style>
+</section>
