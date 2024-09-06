@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import student1 from "../img/student_1.jpg";
-import student2 from "../img/student_2.jpg";
+import student1 from "../img/student_1.webp";
+import student2 from "../img/student_2.webp";
 import Slider from "./Slider.astro";
 ---
 
@@ -60,7 +60,7 @@ import Slider from "./Slider.astro";
 		animation-timeline: --scroll;
 		animation-range: exit 10% exit 100%;
 
-		opacity: .75;
+		opacity: .55;
 	}
 	.important-text {
 		color: white;
@@ -75,7 +75,7 @@ import Slider from "./Slider.astro";
 	@keyframes scale-up {
 		to {
 			scale: 1.5;
-			opacity: 1;
+			opacity: .75;
 		}
 	}
 	@keyframes fade-away {

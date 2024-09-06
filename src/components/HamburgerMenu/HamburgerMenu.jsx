@@ -14,14 +14,16 @@ export function HamburgerMenu() {
 			<div
 				className="w-full top-0 fixed h-20 flex items-center bg-slate-100 border-b z-30 "
 				id="header-mobile">
-				<img
-					className="size-14 m-2 object-cover rounded-full border-2 border-slate-200 shadow-md"
-					src={avatar.src}
-					alt="avatar professor"
-				/>
-				<h1 class="font-bold flex flex-col items-start  w-full m-auto relative">
-					<strong class="text-md">I'm Steve</strong>
-					<span class="text-sm">Canadian English Professor</span>
+				<a href="#top">
+					<img
+						className="size-14 m-2 object-cover rounded-full border-2 border-slate-200 shadow-md"
+						src={avatar.src}
+						alt="avatar professor"
+					/>
+				</a>
+				<h1 className="font-bold flex flex-col items-start pl-2  w-full m-auto relative">
+					<strong className="text-md">I'm Steve</strong>
+					<span className="text-sm">Canadian English Professor</span>
 					<button
 						className="menu-btn"
 						onClick={toggleMenu}
@@ -38,33 +40,58 @@ export function HamburgerMenu() {
 				<div popover role="menu" id="menu">
 					<ul className="item-container">
 						<li>
-							<a className="item" href="#classes">
+							<a
+								onClick={toggleMenu}
+								className="item"
+								href="#classes">
 								Classes
 							</a>
 						</li>
 						<li>
-							<a className="item" href="#experience">
+							<a
+								onClick={toggleMenu}
+								className="item"
+								href="#experience">
 								Experience
 							</a>
 						</li>
 						<li>
-							<a className="item" href="#inmersion">
+							<a
+								onClick={toggleMenu}
+								className="item"
+								href="#inmersion">
 								Inmersion
 							</a>
 						</li>
 						<li>
-							<a className="item" href="#faq">
+							<a
+								onClick={toggleMenu}
+								className="item"
+								href="#faq">
 								Faq
 							</a>
 						</li>
 						<li>
-							<a className="item" href="#students">
+							<a
+								onClick={toggleMenu}
+								className="item"
+								href="#students">
 								Reviews
 							</a>
 						</li>
 						<li>
-							<a className="item" href="#contact">
+							<a
+								onClick={toggleMenu}
+								className="item"
+								href="#contact">
 								Contact
+							</a>
+						</li>
+						<li>
+							<a
+								className="item"
+								href="/most-3000-common-words-in-english-spanish">
+								3000 Words
 							</a>
 						</li>
 					</ul>

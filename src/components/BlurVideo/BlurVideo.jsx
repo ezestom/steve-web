@@ -1,5 +1,5 @@
 import { useState } from "react";
-import youtube from "../../img/youtube.png";
+import youtube from "../../img/youtube.webp";
 import "./BlurVideo.css";
 import video from "../../video/presentation.mp4";
 

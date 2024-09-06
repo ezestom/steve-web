@@ -39,7 +39,7 @@ export function CardClasses({
 		<section>
 			<article className="cards-classes-article  ">
 				<h3 className="text-3xl font-semibold text-balance">{title}</h3>
-				<p className=" h-auto  w-full opacity-50 font-semibold  py-5 transition-all text-center text-pretty text-xl ">
+				<p className=" h-auto  w-full opacity-50 font-semibold p-4 transition-all text-balance text-center text-xl ">
 					{description}
 				</p>
 				<a
