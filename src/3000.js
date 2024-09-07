@@ -1554,6 +1554,7 @@ export const words = {
 	live: "vivir",
 	living: "viviente",
 	load: "cargar",
+	loader: "cargador",
 	loan: "préstamo",
 	local: "local",
 	locate: "ubicar",

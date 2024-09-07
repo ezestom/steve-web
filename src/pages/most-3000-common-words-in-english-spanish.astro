@@ -11,7 +11,8 @@ const mappedWords = Object.entries(words);
 
 <Layout title="Most 3000 Common Words in English & Spanish">
 	<div
-		class="relative overflow-x-auto sm:rounded-lg flex flex-col items-center justify-center">
+		class="relative overflow-x-auto sm:rounded-lg flex flex-col items-center justify-center"
+		id="section-div">
 		<button
 			onclick="window.location.href = '/';"
 			class="fixed top-0 text-sm -right-2 flex items-center flex-col group important-text rounded-bl-3xl hover:-translate-x-2 hover:scale-105 transition h-[75px] active:scale-100 active:translate-x-0 z-20 opacity-75 hover:opacity-100">
@@ -26,37 +27,49 @@ const mappedWords = Object.entries(words);
 			<div
 				class="flex items-center justify-center flex-col fixed bottom-0 top-0 left-[5%] w-[35vw] text-[#111827]"
 				id="text-container">
-				<p
-					class="text-6xl md:text-5xl font-black lg:text-6xl sm:text-1xl text-center">
+				<p class="text-5xl font-black sm:text-1xl text-center">
 					Most <br /> Common
 				</p>
 				<h1
-					class="text-4xl lg:text-8xl font-black sm:text-1xl text-center md:py-5 mt-1 rounded-3xl overflow-hidden">
+					class="text-7xl font-black sm:text-1xl text-center md:py-5 mt-1 rounded-3xl overflow-hidden">
 					<strong class="important-text">3000</strong>
 				</h1>
 				<span
-					class="absolute whitespace-nowrap -translate-y-16 -rotate-12 text-4xl lg:text-8xl font-black sm:text-1xl text-center">
+					class="absolute whitespace-nowrap -translate-y-16 -rotate-12 text-7xl font-black text-center">
 					Words <code
-						class="text-4xl lg:text-6xl font-black sm:text-1xl text-center bg-gradient-to-r from-[#f12711] to-[#ff7b22] text-transparent bg-clip-text"
+						class="text-4xl lg:text-5xl font-black sm:text-1xl text-center bg-gradient-to-r from-[#f12711] to-[#ff7b22] text-transparent bg-clip-text"
 						>in</code
 					>
 				</span>
 				<span
-					class="flex -translate-y-32 items-center pt-40 text-6xl md:text-5xl font-black flex-col lg:text-6xl sm:text-1xl text-center text-[#111827]">
+					class="flex -translate-y-32 items-center pt-40 text-5xl font-black flex-col text-center text-[#111827]">
 					<span
 						class="bg-gradient-to-r from-[#f12711] to-[#ff7b22] text-transparent bg-clip-text h-[70px]"
 						>English</span
 					>
-					<img src={arrow.src} class="w-[100px] rotate-45" alt="" /> Spanish
+					<img
+						src={arrow.src}
+						class="w-[75px] -my-4 rotate-45"
+						alt=""
+					/> Spanish
 				</span>
+				<p
+					id="marked-count"
+					class="text-8xl font-black sm:text-1xl fixed translate-y-44 text-center bg-gradient-to-r from-[#f12711] to-[#ff7b22] text-transparent bg-clip-text">
+				</p>
 			</div>
 			<div
 				class="flex items-center justify-center flex-col fixed bottom-0 top-0 right-0 z-20 h-fit m-auto">
-				<img src={search.src} class="w-[550px] -rotate-12" alt="" />
+				<img
+					id="search-img"
+					src={search.src}
+					class="w-[500px] -rotate-12"
+					alt=""
+				/>
 
 				<p
 					id="hovered-word"
-					class="text-3xl absolute transition delay-75 whitespace-nowrap">
+					class="text-2xl absolute transition delay-75 whitespace-nowrap">
 					&nbsp;
 				</p>
 			</div>
@@ -72,15 +85,15 @@ const mappedWords = Object.entries(words);
 				alt="arrow go top image"
 				class="-rotate-45 w-[25px] group-hover:scale-110 transition-all duration-250"
 			/>
-			<span class="text-black font-semibold"> Go Top </span>
+			<span class="text-black font-semibold mt-1"> Go Top </span>
 		</button>
 
 		<table
 			id="words-table"
-			class="w-full max-w-[400px] mt-20 mb-10 md:mb-0 text-center text-gray-400 z-0">
-			<thead class="important-text fixed w-full max-w-[400px] top-0">
+			class="w-full sm:max-w-[400px] mt-20 mb-10 md:mb-0 text-center text-gray-400 z-0">
+			<thead class="important-text fixed w-full sm:max-w-[400px] top-0">
 				<tr
-					class="flex items-center jutify-center w-full py-3 sm:py-2 text-base sm:text-3xl">
+					class="flex items-center jutify-between w-full text-center py-3 sm:py-2 text-base sm:text-3xl">
 					<th scope="col" class="w-full">English</th>
 					<th scope="col" class="w-full">Español</th>
 				</tr>
@@ -89,11 +102,16 @@ const mappedWords = Object.entries(words);
 				{
 					mappedWords.map(([english, spanish], index) => (
 						<tr
-							class="group border-b border-gray-700  hover:bg-gray-600  bg-gray-900 font-semibold text-base hover:cursor-crosshair"
+							class="group border-b border-gray-700  hover:bg-gray-600 bg-gray-900 
+							font-semibold text-base hover:cursor-crosshair"
 							data-english={english}
 							data-spanish={spanish}>
-							<td class=" py-1  text-gray-300">{english}</td>
-							<td class=" py-1  text-gray-300">{spanish}</td>
+							<td class=" py-1 w-1/2 tex-center text-gray-300">
+								{english}
+							</td>
+							<td class=" py-1 w-1/2 tex-center text-gray-300">
+								{spanish}
+							</td>
 						</tr>
 					))
 				}
@@ -106,17 +124,25 @@ const mappedWords = Object.entries(words);
 <script is:inline>
 	document.addEventListener("DOMContentLoaded", () => {
 		const hoveredWordElement = document.getElementById("hovered-word");
+		const markedCountElement = document.getElementById("marked-count");
 
-		// Crear un input para la búsqueda (siempre visible)
+		const searchInputContainer = document.createElement("div");
+		searchInputContainer.classList.add(
+			"fixed",
+			"bottom-0",
+			"right-0",
+			"w-full",
+			"max-w-[400px]",
+			"z-30",
+			"flex",
+			"rounded-t-3xl",
+			"overflow-hidden"
+		);
+
 		const searchInput = document.createElement("input");
 		searchInput.type = "text";
 		searchInput.placeholder = "Search for a word...";
 		searchInput.classList.add(
-			"fixed",
-			"bottom-0",
-			"rounded-tl-xl",
-			"right-0",
-			"w-full",
 			"px-6",
 			"py-2",
 			"bg-gray-900",
@@ -124,16 +150,33 @@ const mappedWords = Object.entries(words);
 			"border-t",
 			"border-gray-700",
 			"focus:outline-none",
-			"max-w-[400px]",
-			"z-30"
+			"w-full"
 		);
 
-		document.body.appendChild(searchInput);
+		const deleteButton = document.createElement("button");
+		deleteButton.textContent = "✕";
+		deleteButton.classList.add(
+			"pl-4",
+			"pr-6",
+			"font-black",
+			"hover:bg-[#f12711]",
+			"hover:text-white",
+			"active:outline",
+			"transition",
+			"py-2",
+			"bg-[#ff7b22]",
+			"text-white",
+			"cursor-pointer",
+			"focus:outline-none"
+		);
+
+		searchInputContainer.appendChild(searchInput);
+		searchInputContainer.appendChild(deleteButton);
+		document.body.appendChild(searchInputContainer);
 
 		const englishWordElement = document.createElement("p");
 		const spanishWordElement = document.createElement("p");
 
-		// Estilos en línea para las palabras flotantes
 		englishWordElement.style.fontSize = "1em";
 		englishWordElement.style.fontWeight = "900";
 		englishWordElement.style.position = "absolute";
@@ -153,10 +196,12 @@ const mappedWords = Object.entries(words);
 
 		const rows = document.querySelectorAll("#words-table tbody tr");
 
-		// Recuperar filas marcadas desde localStorage
-		const markedRows = JSON.parse(localStorage.getItem("markedRows")) || [];
+		let markedRows = JSON.parse(localStorage.getItem("markedRows")) || [];
 
-		// Aplicar clase marcada a las filas que ya estaban seleccionadas
+		const updateMarkedCount = () => {
+			markedCountElement.textContent = `${markedRows.length}`;
+		};
+
 		rows.forEach((row, index) => {
 			const english = row.getAttribute("data-english");
 			const spanish = row.getAttribute("data-spanish");
@@ -175,7 +220,6 @@ const mappedWords = Object.entries(words);
 				spanishWordElement.textContent = "";
 			});
 
-			// Manejar el clic en la fila para marcarla/desmarcarla
 			row.addEventListener("click", () => {
 				row.classList.toggle("marked");
 
@@ -189,12 +233,33 @@ const mappedWords = Object.entries(words);
 				}
 
 				localStorage.setItem("markedRows", JSON.stringify(markedRows));
+				updateMarkedCount();
 			});
+		});
+
+		updateMarkedCount();
+
+		// Borrar contenido del campo de búsqueda al hacer clic en el botón de eliminar
+		deleteButton.addEventListener("click", () => {
+			searchInput.value = "";
+			filterTable("");
 		});
 
 		// Filtrar la tabla en tiempo real
 		searchInput.addEventListener("input", () => {
-			const searchValue = searchInput.value.toLowerCase();
+			filterTable(searchInput.value);
+		});
+
+		// Limpiar campo de búsqueda cuando se presiona la tecla Escape
+		searchInput.addEventListener("keydown", (event) => {
+			if (event.key === "Escape") {
+				searchInput.value = "";
+				filterTable("");
+			}
+		});
+
+		const filterTable = (searchValue) => {
+			searchValue = searchValue.toLowerCase();
 
 			rows.forEach((row) => {
 				const english = row.getAttribute("data-english").toLowerCase();
@@ -209,12 +274,11 @@ const mappedWords = Object.entries(words);
 					row.style.display = "none";
 				}
 			});
-		});
+		};
 	});
 </script>
 
 <style>
-	
 	.important-text {
 		color: white;
 		padding: 1rem;
@@ -224,22 +288,7 @@ const mappedWords = Object.entries(words);
 		background: linear-gradient(90deg, #f12711, #ff7b22) !important;
 		color: white !important;
 	}
-	#hovered-word {
-		animation: appearEffect 0.7s ease-in-out;
-	}
-
-	@keyframes appearEffect {
-		0% {
-			opacity: 0;
-			transform: translateY(30px) scale(0.8) rotate(-10deg);
-		}
-		50% {
-			opacity: 0.5;
-			transform: translateY(-10px) scale(1.05) rotate(5deg);
-		}
-		100% {
-			opacity: 1;
-			transform: translateY(0) scale(1) rotate(0deg);
-		}
+	#search-img {
+		filter: drop-shadow(0 0 0.05em #fafafa);
 	}
 </style>
