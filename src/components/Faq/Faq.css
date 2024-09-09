@@ -28,7 +28,8 @@ details {
 	background-color: white;
 	opacity: 0.9;
 	p {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
+		font-weight: 500;
 	}
 
 	summary {
@@ -53,7 +54,7 @@ details {
 	}
 
 	> *:not(summary) {
-		padding: .75rem;
+		padding: 0.75rem;
 	}
 }
 
